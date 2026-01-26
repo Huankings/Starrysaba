@@ -3,6 +3,7 @@
   "tip.starexpress.cooldown": "技能在 %s 秒后可用",
 
   "block.starexpress.circuitweaver_plush": "Circuitweaver毛绒玩具",
+  "block.starexpress.jade_plush": "翡翠毛绒玩具",
   "item.starexpress.tape": "胶带",
       "item.starexpress.tape.tooltip.1": "用来封住其它玩家的嘴。",
       "item.starexpress.tape.tooltip.2": "被封住嘴的玩家在外面待太久会窒息。",
@@ -159,4 +160,5 @@
   "guidebook.role.northernlights:medium": "天秤",
       "guidebook.role.title.northernlights:medium": "灵魂召唤师",
       "guidebook.role.description.northernlights:medium": ""
+
 }
