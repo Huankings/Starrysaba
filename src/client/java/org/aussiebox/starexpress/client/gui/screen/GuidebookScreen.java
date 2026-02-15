@@ -267,7 +267,9 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
                 allergicConfig.nothingChance(),
                 allergicConfig.instinctChance(),
                 allergicConfig.armorChance(),
-                allergicConfig.poisonChance()
+                allergicConfig.poisonChance(),
+                StarryExpress.CONFIG.muzzlerConfig.suffocationTime(),
+                StarryExpress.CONFIG.muzzlerConfig.tapeTearCheckCount()
         ));
 
         if (Objects.equals(roleID, "starexpress:starstruck")) {

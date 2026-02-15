@@ -159,6 +159,12 @@
       "guidebook.role.description.northernlights:wench": "",
   "guidebook.role.northernlights:medium": "天秤",
       "guidebook.role.title.northernlights:medium": "灵魂召唤师",
-      "guidebook.role.description.northernlights:medium": ""
+      "guidebook.role.description.northernlights:medium": "",
+  "config.starexpress.server.category.roles": "Role/Modifier Config",
+  "config.starexpress.server.starstruck.reduce_cooldown": "Reduce Ability Cooldown On Task Completion",
+  "config.starexpress.server.starstruck.ability_duration": "Ability Duration",
+  "guidebook.role.starexpress:muzzler": "Muzzler",
+  "guidebook.role.title.starexpress:muzzler": "The Silent Reaper",
+  "guidebook.role.description.starexpress:muzzler": "The Muzzler is yet another killer who happens to be armed to the teeth with duct tape.\nI'm not even kidding.\n\nFor 75 coins, the Muzzler can purchase tape, and use said tape to silence one player.\n\nIf a silenced player remains outside for %9$s seconds, they will die due to lack of air flow.\n\nRemoving the tape from a silenced player can be done by clicking them %10$s times, but each time may take some mood from the silenced player- if their mood drops to 0 because of this, they may die to the pain inflicted upon them."
 
 }

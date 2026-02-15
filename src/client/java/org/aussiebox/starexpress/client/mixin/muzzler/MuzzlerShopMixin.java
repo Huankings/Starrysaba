@@ -18,9 +18,7 @@ import java.util.List;
 @Mixin(LimitedInventoryScreen.class)
 public class MuzzlerShopMixin {
 
-    @Shadow
-    @Final
-    public LocalPlayer player;
+    @Shadow @Final public LocalPlayer player;
 
     @ModifyVariable(
             method = "init",

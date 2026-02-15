@@ -65,6 +65,9 @@
   "guidebook.role.starexpress:allergic": "Allergic",
       "guidebook.role.title.starexpress:allergic": "The Dependent",
       "guidebook.role.description.starexpress:allergic": "The Allergic's medical record has proven that they have severe weaknesses- upon either eating or drinking, they may suffer severe side-effects.\n\nThe Allergic's allergy type is randomly chosen upon the modifier being assigned.\n\nUpon consuming their affected consumable type, the Allergic will receive one of the following effects:\n- Nothing (%5$s/%4$s chance)\n- 3 seconds of Instinct (%6$s/%4$s chance)\n- Immunity to the next attack (%7$s/%4$s chance)\n- Immunity-bypassing Poison (%8$s/%4$s chance)",
+  "guidebook.role.starexpress:muzzler": "Muzzler",
+      "guidebook.role.title.starexpress:muzzler": "The Silent Reaper",
+      "guidebook.role.description.starexpress:muzzler": "The Muzzler is yet another killer who happens to be armed to the teeth with duct tape.\nI'm not even kidding.\n\nFor 75 coins, the Muzzler can purchase tape, and use said tape to silence one player.\n\nIf a silenced player remains outside for %9$s seconds, they will die due to lack of air flow.\n\nRemoving the tape from a silenced player can be done by clicking them %10$s times, but each time may take some mood from the silenced player- if their mood drops to 0 because of this, they may die to the pain inflicted upon them.",
 
   "guidebook.role.noellesroles:jester": "Jester",
       "guidebook.role.title.noellesroles:jester": "The Exiled Trickster",

@@ -32,9 +32,7 @@ public class TapeItem extends Item {
         super.interactLivingEntity(itemStack, player, livingEntity, interactionHand);
 
         if (!(livingEntity instanceof Player victim)) return InteractionResult.FAIL;
-
         if (!GameFunctions.isPlayerAliveAndSurvival(victim)) return InteractionResult.FAIL;
-
         if (player.getCooldowns().isOnCooldown(itemStack.getItem())) return InteractionResult.FAIL;
 
         SilenceComponent victimSilence = SilenceComponent.KEY.get(victim);
@@ -44,7 +42,7 @@ public class TapeItem extends Item {
         player.getInventory().removeItem(itemStack);
         player.getCooldowns().addCooldown(itemStack.getItem(), StarryExpress.CONFIG.muzzlerConfig.tapeCooldown() * 20);
 
-        player.level().playSound(null, victim.getX(), victim.getY(), victim.getZ(), ModSounds.ITEM_TAPE_APPLY, SoundSource.PLAYERS, 1.0F, 1.0F);
+        player.level().playSound(player, victim,  ModSounds.ITEM_TAPE_APPLY, SoundSource.PLAYERS, 1.0F, 1.0F);
 
         victimSilence.setSilenced(true);
         victimSilence.setSilencer(player.getUUID());
