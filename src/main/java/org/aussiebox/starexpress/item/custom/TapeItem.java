@@ -2,7 +2,6 @@ package org.aussiebox.starexpress.item.custom;
 
 import dev.doctor4t.wathe.game.GameFunctions;
 import net.minecraft.network.chat.Component;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
@@ -42,7 +41,7 @@ public class TapeItem extends Item {
         player.getInventory().removeItem(itemStack);
         player.getCooldowns().addCooldown(itemStack.getItem(), StarryExpress.CONFIG.muzzlerConfig.tapeCooldown() * 20);
 
-        player.level().playSound(player, victim,  ModSounds.ITEM_TAPE_APPLY, SoundSource.PLAYERS, 1.0F, 1.0F);
+        player.playSound(ModSounds.ITEM_TAPE_APPLY,1.0F, 1.0F);
 
         victimSilence.setSilenced(true);
         victimSilence.setSilencer(player.getUUID());

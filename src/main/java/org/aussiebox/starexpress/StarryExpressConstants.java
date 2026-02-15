@@ -17,7 +17,7 @@ public interface StarryExpressConstants {
     List<ShopEntry> MUZZLER_SHOP = Util.make(new ArrayList<>(), (entries) -> {
         entries.add(new ShopEntry(WatheItems.KNIFE.getDefaultInstance(), 100, ShopEntry.Type.WEAPON));
         entries.add(new ShopEntry(WatheItems.REVOLVER.getDefaultInstance(), 300, ShopEntry.Type.WEAPON));
-        entries.add(new ShopEntry(StarryExpressItems.TAPE.getDefaultInstance(), 350, ShopEntry.Type.WEAPON));
+        entries.add(new ShopEntry(StarryExpressItems.TAPE.getDefaultInstance(), 75, ShopEntry.Type.WEAPON));
         entries.add(new ShopEntry(WatheItems.PSYCHO_MODE.getDefaultInstance(), 300, ShopEntry.Type.WEAPON) {
             public boolean onBuy(@NotNull Player player) {
                 return PlayerShopComponent.usePsychoMode(player);

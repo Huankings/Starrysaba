@@ -2,6 +2,7 @@ package org.aussiebox.starexpress.cca;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import org.aussiebox.starexpress.StarryExpress;
 import org.jetbrains.annotations.NotNull;
@@ -23,6 +24,9 @@ public class StarstruckComponent implements AutoSyncedComponent, ServerTickingCo
     public void serverTick() {
         if (this.ticks > 0) {
             --this.ticks;
+            if (player instanceof ServerPlayer serverPlayer) {
+                serverPlayer.serverLevel().sendParticles(StarryExpress.STARSTRUCK_SPARKLE, serverPlayer.getX(), serverPlayer.getY()+0.2, serverPlayer.getZ(), player.getRandom().nextIntBetweenInclusive(1, 2), 0.2, 0, 0.2, 0);
+            }
             this.sync();
         }
     }

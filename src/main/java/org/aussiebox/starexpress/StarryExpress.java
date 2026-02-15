@@ -7,8 +7,11 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.Registry;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -32,6 +35,8 @@ public class StarryExpress implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static final StarryExpressServerConfig CONFIG = StarryExpressServerConfig.createAndLoad();
 
+    public static final SimpleParticleType STARSTRUCK_SPARKLE = FabricParticleTypes.simple();
+
     @Override
     public void onInitialize() {
         ModSounds.init();
@@ -47,6 +52,7 @@ public class StarryExpress implements ModInitializer {
 
         registerPackets();
         registerEvents();
+        registerParticles();
     }
 
     public void registerPackets() {
@@ -62,7 +68,7 @@ public class StarryExpress implements ModInitializer {
 
                 ServerLevel level = context.player().serverLevel();
                 level.playSound(null, BlockPos.containing(context.player().position()), SoundEvents.RESPAWN_ANCHOR_CHARGE, SoundSource.PLAYERS, 1.0F, 1.0F);
-                level.sendParticles(ParticleTypes.END_ROD, context.player().getX(), context.player().getY(), context.player().getZ(), 75,  0.5,  1.5,  0.5,  0.1);
+                level.sendParticles(STARSTRUCK_SPARKLE, context.player().getX(), context.player().getY(), context.player().getZ(), 75,  0.5,  1.5,  0.5,  0.0);
             }
 
         });
@@ -102,6 +108,10 @@ public class StarryExpress implements ModInitializer {
             return InteractionResult.PASS;
         });
 
+    }
+
+    public void registerParticles() {
+        Registry.register(BuiltInRegistries.PARTICLE_TYPE, id("starstruck_sparkle"), STARSTRUCK_SPARKLE);
     }
 
     public static ResourceLocation id(String key) {
