@@ -160,11 +160,11 @@
   "guidebook.role.northernlights:medium": "天秤",
       "guidebook.role.title.northernlights:medium": "灵魂召唤师",
       "guidebook.role.description.northernlights:medium": "",
-  "config.starexpress.server.category.roles": "Role/Modifier Config",
-  "config.starexpress.server.starstruck.reduce_cooldown": "Reduce Ability Cooldown On Task Completion",
-  "config.starexpress.server.starstruck.ability_duration": "Ability Duration",
-  "guidebook.role.starexpress:muzzler": "Muzzler",
-  "guidebook.role.title.starexpress:muzzler": "The Silent Reaper",
-  "guidebook.role.description.starexpress:muzzler": "The Muzzler is yet another killer who happens to be armed to the teeth with duct tape.\nI'm not even kidding.\n\nFor 75 coins, the Muzzler can purchase tape, and use said tape to silence one player.\n\nIf a silenced player remains outside for %9$s seconds, they will die due to lack of air flow.\n\nRemoving the tape from a silenced player can be done by clicking them %10$s times, but each time may take some mood from the silenced player- if their mood drops to 0 because of this, they may die to the pain inflicted upon them."
+  "config.starexpress.server.category.roles": "职业/修饰符配置",
+  "config.starexpress.server.starstruck.reduce_cooldown": "减少任务完成时的技能冷却时间",
+  "config.starexpress.server.starstruck.ability_duration": "技能持续时间",
+  "guidebook.role.starexpress:muzzler": "静语者",
+  "guidebook.role.title.starexpress:muzzler": "沉默的收割者",
+  "guidebook.role.description.starexpress:muzzler": "静语者是一个全副武装的杀手,不过这次他们带着的是胶带。我不是在开玩笑。\n\n花费 75 金币,静语者可以购买胶带,并用它封住一名玩家的嘴。\n\n如果被封住嘴的玩家在 %9$s 秒后仍停留在车外,他们将会因空气不足而窒息死亡。\n\n可以通过点击 %10$s 次来移除被封住嘴玩家身上的胶带,但每次操作都会降低被封住嘴玩家的san值——如果因此san值被降至 0,他们会因痛苦而亡。"
 
 }
