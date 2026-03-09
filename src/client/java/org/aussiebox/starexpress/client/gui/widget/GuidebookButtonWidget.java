@@ -29,5 +29,4 @@ public class GuidebookButtonWidget extends Button {
         int color = 0x495CFA86;
         context.fillGradient(RenderType.guiOverlay(), x, y, x + 16, y + 16, color, color, z);
     }
-
 }

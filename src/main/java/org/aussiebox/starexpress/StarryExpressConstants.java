@@ -16,8 +16,8 @@ import java.util.List;
 public interface StarryExpressConstants {
     List<ShopEntry> MUZZLER_SHOP = Util.make(new ArrayList<>(), (entries) -> {
         entries.add(new ShopEntry(WatheItems.KNIFE.getDefaultInstance(), 100, ShopEntry.Type.WEAPON));
-        entries.add(new ShopEntry(WatheItems.REVOLVER.getDefaultInstance(), 300, ShopEntry.Type.WEAPON));
         entries.add(new ShopEntry(StarryExpressItems.TAPE.getDefaultInstance(), 75, ShopEntry.Type.WEAPON));
+        entries.add(new ShopEntry(WatheItems.GRENADE.getDefaultInstance(), 350, ShopEntry.Type.WEAPON));
         entries.add(new ShopEntry(WatheItems.PSYCHO_MODE.getDefaultInstance(), 300, ShopEntry.Type.WEAPON) {
             public boolean onBuy(@NotNull Player player) {
                 return PlayerShopComponent.usePsychoMode(player);
@@ -26,6 +26,7 @@ public interface StarryExpressConstants {
         entries.add(new ShopEntry(WatheItems.POISON_VIAL.getDefaultInstance(), 100, ShopEntry.Type.POISON));
         entries.add(new ShopEntry(WatheItems.SCORPION.getDefaultInstance(), 50, ShopEntry.Type.POISON));
         entries.add(new ShopEntry(WatheItems.FIRECRACKER.getDefaultInstance(), 10, ShopEntry.Type.TOOL));
+        entries.add(new ShopEntry(WatheItems.LOCKPICK.getDefaultInstance(), 50, ShopEntry.Type.TOOL));
         entries.add(new ShopEntry(WatheItems.CROWBAR.getDefaultInstance(), 25, ShopEntry.Type.TOOL));
         entries.add(new ShopEntry(WatheItems.BODY_BAG.getDefaultInstance(), 200, ShopEntry.Type.TOOL));
         entries.add(new ShopEntry(WatheItems.BLACKOUT.getDefaultInstance(), 200, ShopEntry.Type.TOOL) {
