@@ -1,9 +1,17 @@
-<p align="center">
+<center>
 <img src="https://cdn.modrinth.com/data/cached_images/d906a1f0e73cd47bfd8a87c6d5980839a6b8036f.png" alt="The logo for this mod, Starry Express." width=128><br><br>
+
 <img src="https://cdn.modrinth.com/data/cached_images/7ff05774a8c364131ef5e0c2c2e17311f342729f.png" alt="A Minecraft Title rendered in BlockBench reading 'Starry Express'." width=392>
-</p>
 
 <h2></h2>
+
+[![modrinth](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/available/modrinth_vector.svg)](https://modrinth.com/mod/starexpress)
+[![github](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/available/github_vector.svg)](https://github.com/AussieBox/StarryExpress)
+<br>
+[![kofi-singular-alt](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular-alt_vector.svg)](https://ko-fi.com/aussiebox)
+[![discord-singular](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/discord-singular_64h.png)](https://discord.gg/9m2HXggUHg)
+
+</center>
 
 Starry Express is an addon mod for [WATHE](https://modrinth.com/mod/wathe)  by doctor4t. To learn how to play WATHE alongside addon mods like this one, check out [agmas' video.](https://youtu.be/h_c-dpjlONY?si=C-eqzjIa0_O_2KbV)
 
@@ -26,11 +34,16 @@ Learn about Roles and Modifiers from WATHE and other addon mods, all from a user
 - Become *Starstruck* once every 90 (configurable) seconds.
 - While *Starstruck*, move faster and see players through walls with passive instinct- but your role will be revealed to everyone nearby!
 - Shorten your ability cooldown by 5 (configurable) seconds every time you complete a task.
+### **Muzzler** *[Killer]*
+- Purchase Tape for 75 coins. Then use that tape to silence other players!
+- Silenced players must be clicked 5 times to have their tape removed.
+    - Each click takes some of their mood- if they drop to 0 because of this, they die.
+- Silenced players suffocate if left outside for too long.
 
 ## Decoration
 ### Plushies!
-Currently, the only plushie added by the mod is the **Circuitweaver Plushie**, a plushie of my Wings of Fire OC!
-I plan to add more plushies of my friends soon! Stay tuned for that :3
+- **Circuitweaver Plush** - A plushie of my Wings of Fire OC/persona!
+- **JadeCrystalHeart Plush** - Jade my goat <3
 
 ## For Server Owners
 ### Configuration
@@ -40,8 +53,11 @@ You can find this config at ```config/starexpress-server.json5``` in your server
 
 If, for whatever reason, you wish to play with Starry Express in a singleplayer instance, your client's config options will be used instead. Your client-sided options can be found in the same place as if they were on a server.
 
-> When joining a server, your client's config options will _not_ be overridden, but detached from the proper config instead, and thus, completely ignored. 
+> When joining a server, your client's config options will _not_ be overridden, but detached from the proper config instead, and thus, completely ignored.
 
 ## Special Thanks
 Huge thanks to the following users for their contributions to Starry Express:
 - Qlickly_ (Chinese Translations)
+- haiman233 (Chinese Translations)
+- Creepalotl (Tape Texture)
+- DragonSlayr15001 (Mood Textures)
