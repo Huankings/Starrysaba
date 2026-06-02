@@ -1,5 +1,6 @@
 package org.aussiebox.starexpress.cca;
 
+import dev.doctor4t.wathe.record.GameRecordManager;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
@@ -26,6 +27,10 @@ public class StarstruckComponent implements AutoSyncedComponent, ServerTickingCo
             --this.ticks;
             if (player instanceof ServerPlayer serverPlayer) {
                 serverPlayer.serverLevel().sendParticles(StarryExpress.STARSTRUCK_SPARKLE, serverPlayer.getX(), serverPlayer.getY()+0.2, serverPlayer.getZ(), player.getRandom().nextIntBetweenInclusive(1, 2), 0.2, 0, 0.2, 0);
+                if (this.ticks == 0) {
+                    // 星界能力自然结束时在服务端统一记录，确保实时回放和总结算都能稳定出现。
+                    GameRecordManager.recordGlobalEvent(serverPlayer.serverLevel(), StarryExpress.id("starstruck_ability_end"), serverPlayer, null);
+                }
             }
             this.sync();
         }

@@ -13,12 +13,18 @@
   "announcement.role.starexpress.starstruck": "Starstruck!",
   "announcement.goals.starexpress.starstruck": "Reveal your true power at the perfect moment.",
   "tip.starexpress.starstruck": "Use %s to go Starstruck!",
+  "replay.skill_use.starexpress.starstruck": "%s activated Starstruck ability",
+  "replay.global.starexpress.starstruck_end": "%s's Starstruck ability ended",
 
   "announcement.role.starexpress.muzzler": "Muzzler",
   "announcement.goals.starexpress.muzzler": "Stop passengers from passing on secrets...",
   "death_reason.starexpress.silenced_and_outside": "lack of air flow.",
   "death_reason.starexpress.tape_removed_low_mood": "coercing \"assistance\".",
   "tip.starexpress.muzzler.silenced": "Muzzled",
+  "replay.item_use.starexpress.tape": "%s taped %s's mouth shut",
+  "replay.global.starexpress.tape_removed": "%s removed %s's tape placed by %s",
+  "replay.death.starexpress.silenced_and_outside.died": "%s suffocated outside because of tape placed by %s",
+  "replay.death.starexpress.tape_removed_low_mood.died": "%s died in pain as %s tried to remove tape placed by %s",
 
   "announcement.modifier.allergic": "Allergic!",
   "hud.allergic.hint": "Allergic",

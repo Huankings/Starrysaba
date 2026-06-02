@@ -3,6 +3,7 @@ package org.aussiebox.starexpress;
 import dev.doctor4t.wathe.cca.GameWorldComponent;
 import dev.doctor4t.wathe.cca.PlayerMoodComponent;
 import dev.doctor4t.wathe.game.GameFunctions;
+import dev.doctor4t.wathe.record.GameRecordManager;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
@@ -16,6 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import org.aussiebox.starexpress.block.ModBlocks;
@@ -26,6 +28,7 @@ import org.aussiebox.starexpress.cca.StarstruckComponent;
 import org.aussiebox.starexpress.config.StarryExpressServerConfig;
 import org.aussiebox.starexpress.item.StarryExpressItems;
 import org.aussiebox.starexpress.packet.AbilityC2SPacket;
+import org.aussiebox.starexpress.record.StarryExpressReplayFormatters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,6 +50,7 @@ public class StarryExpress implements ModInitializer {
         StarryExpressCommands.init();
         StarryExpressRoles.init();
         StarryExpressModifiers.init();
+        StarryExpressReplayFormatters.register();
 
         PayloadTypeRegistry.playC2S().register(AbilityC2SPacket.TYPE, AbilityC2SPacket.CODEC);
 
@@ -65,6 +69,7 @@ public class StarryExpress implements ModInitializer {
             if (gameWorldComponent.isRole(context.player(), StarryExpressRoles.STARSTRUCK) && abilityComponent.cooldown <= 0) {
                 abilityComponent.setCooldown(CONFIG.starstruckConfig.abilityCooldown() * 20);
                 StarstruckComponent.KEY.get(context.player()).setTicks(CONFIG.starstruckConfig.abilityDuration() * 20);
+                GameRecordManager.recordSkillUse(context.player(), id("starstruck_ability"), null, null);
 
                 ServerLevel level = context.player().serverLevel();
                 level.playSound(null, BlockPos.containing(context.player().position()), SoundEvents.RESPAWN_ANCHOR_CHARGE, SoundSource.PLAYERS, 1.0F, 1.0F);
@@ -89,6 +94,16 @@ public class StarryExpress implements ModInitializer {
                 victimSilence.setTearChecks(victimSilence.getTearChecks() + 1);
                 victim.level().playSound(null, victim.getX(), victim.getY(), victim.getZ(), ModSounds.ITEM_TAPE_APPLY, SoundSource.PLAYERS, 1.0F, 2.0F);
 
+                if (player instanceof net.minecraft.server.level.ServerPlayer serverPlayer && victim instanceof net.minecraft.server.level.ServerPlayer serverVictim) {
+                    GameRecordManager.event("global_event")
+                            .world(serverPlayer.serverLevel())
+                            .actor(serverPlayer)
+                            .target(serverVictim)
+                            .put("event", id("tape_removed").toString())
+                            .putUuid("silencer", victimSilence.getSilencer())
+                            .record();
+                }
+
                 if (victimSilence.getTearChecks() >= CONFIG.muzzlerConfig.tapeTearCheckCount()) victimSilence.setSilenced(false);
 
                 victimSilence.sync();
@@ -99,7 +114,13 @@ public class StarryExpress implements ModInitializer {
                 victimMood.sync();
 
                 if (victimMood.getMood() <= 0.0F && CONFIG.muzzlerConfig.killIfCheckedAtZero()) {
-                    GameFunctions.killPlayer(victim, true, victim.level().getPlayerByUUID(victimSilence.getSilencer()), StarryExpressConstants.SILENCED_TAPE_REMOVED_DEATH_REASON);
+                    CompoundTag extraDeathData = new CompoundTag();
+                    if (victimSilence.getSilencer() != null) {
+                        extraDeathData.putUUID("silencer", victimSilence.getSilencer());
+                        extraDeathData.putUUID("replay_actor", victimSilence.getSilencer());
+                    }
+                    extraDeathData.putUUID("remover", player.getUUID());
+                    GameFunctions.killPlayer(victim, true, victim.level().getPlayerByUUID(victimSilence.getSilencer()), StarryExpressConstants.SILENCED_TAPE_REMOVED_DEATH_REASON, extraDeathData);
                 }
 
                 return InteractionResult.SUCCESS;

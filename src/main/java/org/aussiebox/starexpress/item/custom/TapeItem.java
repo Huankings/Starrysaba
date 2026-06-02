@@ -1,6 +1,7 @@
 package org.aussiebox.starexpress.item.custom;
 
 import dev.doctor4t.wathe.game.GameFunctions;
+import dev.doctor4t.wathe.record.GameRecordManager;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.TooltipFlag;
 import org.aussiebox.starexpress.ModSounds;
 import org.aussiebox.starexpress.StarryExpress;
 import org.aussiebox.starexpress.cca.SilenceComponent;
+import org.aussiebox.starexpress.item.StarryExpressItems;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -46,6 +48,10 @@ public class TapeItem extends Item {
         victimSilence.setSilenced(true);
         victimSilence.setSilencer(player.getUUID());
         victimSilence.sync();
+
+        if (player instanceof net.minecraft.server.level.ServerPlayer serverPlayer && victim instanceof net.minecraft.server.level.ServerPlayer serverVictim) {
+            GameRecordManager.recordItemUse(serverPlayer, StarryExpress.id("tape"), serverVictim, null);
+        }
 
         return InteractionResult.SUCCESS;
     }

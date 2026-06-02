@@ -53,8 +53,14 @@ public class SilenceComponent implements AutoSyncedComponent, ServerTickingCompo
         else outsideTicks = 0;
 
         if (StarryExpress.CONFIG.muzzlerConfig.suffocationTime() > 0) {
-            if (outsideTicks >= StarryExpress.CONFIG.muzzlerConfig.suffocationTime() * 20)
-                GameFunctions.killPlayer(player, true, player.level().getPlayerByUUID(silencer), StarryExpressConstants.SILENCED_OUTSIDE_DEATH_REASON);
+            if (outsideTicks >= StarryExpress.CONFIG.muzzlerConfig.suffocationTime() * 20) {
+                CompoundTag extraDeathData = new CompoundTag();
+                if (silencer != null) {
+                    extraDeathData.putUUID("silencer", silencer);
+                    extraDeathData.putUUID("replay_actor", silencer);
+                }
+                GameFunctions.killPlayer(player, true, player.level().getPlayerByUUID(silencer), StarryExpressConstants.SILENCED_OUTSIDE_DEATH_REASON, extraDeathData);
+            }
         }
 
         this.sync();

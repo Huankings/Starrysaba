@@ -8,6 +8,8 @@
     "HeldItemRendererMixin",
     "InventoryScreenMixin",
     "LimitedInventoryScreenMixin",
+    "muzzler.MuzzlerPsychoDroneMixin",
+    "muzzler.MuzzlerPsychoDroneLoopMixin",
     "muzzler.MuzzlerShopMixin",
     "starstruck.StarstruckHudMixin"
   ],

@@ -4,6 +4,18 @@ plugins {
     id 'io.freefair.lombok' version '9.0.0'
 }
 
+/**
+ * 优先拾取 libs 目录里手动替换过的本地模组包。
+ * 这样在联调 Wathe / HarpyModLoader 时，不需要先把新 jar 发布到远程仓库，
+ * 也能避免因为远程缓存版本落后，导致编译时继续拿到旧接口。
+ */
+def findLatestLocalModJar(String prefix) {
+    return fileTree(dir: "libs", include: ["${prefix}-*.jar"])
+            .files
+            .sort { left, right -> right.lastModified() <=> left.lastModified() }
+            .find()
+}
+
 version = project.mod_version
 group = project.maven_group
 
@@ -64,8 +76,11 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modApi "dev.doctor4t:wathe:${project.wathe_version}"
-    modApi "maven.modrinth:harpymodloader:${project.harpy_mod_loader_version}"
+    def localWatheJar = findLatestLocalModJar("wathe")
+    def localHarpyJar = findLatestLocalModJar("harpymodloader")
+    // 先走本地联调 jar，找不到时再回退到 Maven 坐标，兼顾开发联调和纯净环境构建。
+    modApi(localWatheJar != null ? files(localWatheJar) : "dev.doctor4t:wathe:${project.wathe_version}")
+    modApi(localHarpyJar != null ? files(localHarpyJar) : "maven.modrinth:harpymodloader:${project.harpy_mod_loader_version}")
 
     modApi "maven.modrinth:stupid-express:${project.stupid_express_version}"
     modApi "maven.modrinth:noelles-roles-tmm:${project.noelles_roles_version}"

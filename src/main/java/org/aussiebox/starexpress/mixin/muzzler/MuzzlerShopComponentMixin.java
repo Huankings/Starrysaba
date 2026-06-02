@@ -3,6 +3,7 @@ package org.aussiebox.starexpress.mixin.muzzler;
 import dev.doctor4t.wathe.cca.GameWorldComponent;
 import dev.doctor4t.wathe.cca.PlayerShopComponent;
 import dev.doctor4t.wathe.index.WatheSounds;
+import dev.doctor4t.wathe.record.ShopPurchaseTracker;
 import dev.doctor4t.wathe.util.ShopEntry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.ChatFormatting;
@@ -43,6 +44,12 @@ public abstract class MuzzlerShopComponentMixin {
                 }
 
                 if (this.balance >= entry.price() && !this.player.getCooldowns().isOnCooldown(entry.stack().getItem()) && entry.onBuy(this.player)) {
+                    /*
+                     * Muzzler 的服务端商店在这里已经改写成了自定义商品列表，
+                     * 所以必须把真实购买结果回填给 Wathe 的回放追踪器，
+                     * 否则回放仍会按原版固定商店索引误判商品。
+                     */
+                    ShopPurchaseTracker.captureSuccessfulPurchase(this.player, entry, index, entry.price());
                     this.balance -= entry.price();
                     Player var6 = this.player;
                     if (var6 instanceof ServerPlayer) {

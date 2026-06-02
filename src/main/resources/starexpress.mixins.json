@@ -8,6 +8,7 @@
     "MoodMixin",
     "allergic.AllergicEatMixin",
     "allergic.AllergicGameFunctionsMixin",
+    "muzzler.MuzzlerBatHitSoundMixin",
     "muzzler.MuzzlerShopComponentMixin"
   ],
   "injectors": {
