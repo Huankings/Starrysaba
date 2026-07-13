@@ -23,6 +23,7 @@ import org.aussiebox.starexpress.StarryExpress;
 import org.aussiebox.starexpress.StarryExpressRoles;
 import org.aussiebox.starexpress.block.ModBlocks;
 import org.aussiebox.starexpress.block.entity.ModBlockEntities;
+import org.aussiebox.starexpress.client.instinct.StarryInstinctHandlers;
 import org.aussiebox.starexpress.client.particle.StarstruckSparkleParticle;
 import org.aussiebox.starexpress.client.render.blockentity.PlushBlockEntityRenderer;
 import org.aussiebox.starexpress.packet.AbilityC2SPacket;
@@ -36,6 +37,8 @@ public class StarryExpressClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        StarryInstinctHandlers.register();
+
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), ModBlocks.CIRCUITWEAVER_PLUSH);
         BlockEntityRenderers.register(ModBlockEntities.PLUSH, PlushBlockEntityRenderer::new);
 

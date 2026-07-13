@@ -22,9 +22,7 @@
   "mixins": [
     "GetTargetMixin",
     "PlayerEntityMixin",
-    "allergic.AllergicInstinctMixin",
     "muzzler.SilencedHudMixin",
-    "starstruck.StarstruckInstinctMixin",
     "starstruck.StarstruckMoodRendererMixin"
   ]
 }
