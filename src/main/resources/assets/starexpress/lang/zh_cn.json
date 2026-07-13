@@ -11,7 +11,7 @@
       "subtitles.starexpress.item.tape_apply": "有谁正在使用胶带",
 
   "announcement.role.starexpress.starstruck": "星界使者",
-  "announcement.goals.starexpress.starstruck": "在关键时刻发挥你的真正实力。",
+  "announcement.goals.starexpress.starstruck": "在关键时刻发挥你的真正实力",
   "tip.starexpress.starstruck": "按下 %s 键使用星界能力",
   "replay.skill_use.starexpress.starstruck": "%s 发动了星界能力",
   "replay.global.starexpress.starstruck_end": "%s 的星界能力时间结束",
