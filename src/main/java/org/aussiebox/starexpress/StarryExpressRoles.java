@@ -2,6 +2,7 @@ package org.aussiebox.starexpress;
 
 import dev.doctor4t.wathe.api.Role;
 import dev.doctor4t.wathe.api.WatheRoles;
+import dev.doctor4t.wathe.api.shop.ShopApi;
 import org.agmas.harpymodloader.Harpymodloader;
 import org.agmas.harpymodloader.events.ResetPlayerEvent;
 import org.aussiebox.starexpress.cca.AbilityComponent;
@@ -46,6 +47,16 @@ public class StarryExpressRoles {
 
         /// MUZZLER
         Harpymodloader.setRoleMaximum(MUZZLER, 1);
+        /*
+         * Muzzler 现在只通过 Wathe 商店修改器替换默认左轮格子。
+         * 这样它能继续继承默认杀手商店的商品顺序、价格和特殊购买逻辑，
+         * 只把“手枪位”换成自己的胶带。
+         */
+        ShopApi.registerShopModifier(
+                StarryExpress.id("muzzler_shop"),
+                ShopApi.DEFAULT_PRIORITY,
+                MuzzlerShopHandler::modifyShop
+        );
 
         ResetPlayerEvent.EVENT.register(player -> {
             AbilityComponent.KEY.get(player).reset();

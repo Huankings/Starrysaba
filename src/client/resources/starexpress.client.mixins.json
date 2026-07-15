@@ -10,7 +10,6 @@
     "LimitedInventoryScreenMixin",
     "muzzler.MuzzlerPsychoDroneMixin",
     "muzzler.MuzzlerPsychoDroneLoopMixin",
-    "muzzler.MuzzlerShopMixin",
     "starstruck.StarstruckHudMixin"
   ],
   "injectors": {

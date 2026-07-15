@@ -7,8 +7,7 @@
     "GameFunctionsMixin",
     "allergic.AllergicEatMixin",
     "allergic.AllergicGameFunctionsMixin",
-    "muzzler.MuzzlerBatHitSoundMixin",
-    "muzzler.MuzzlerShopComponentMixin"
+    "muzzler.MuzzlerBatHitSoundMixin"
   ],
   "injectors": {
     "defaultRequire": 1

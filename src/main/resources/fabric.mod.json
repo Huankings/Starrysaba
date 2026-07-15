@@ -48,6 +48,7 @@
     "fabricloader": ">=${loader_version}",
     "fabric-api": "*",
     "minecraft": "${minecraft_version}",
+    "wathe": "*",
     "harpymodloader": "*"
   }
 }
