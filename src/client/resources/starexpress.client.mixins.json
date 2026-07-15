@@ -22,7 +22,6 @@
   "mixins": [
     "GetTargetMixin",
     "PlayerEntityMixin",
-    "muzzler.SilencedHudMixin",
-    "starstruck.StarstruckMoodRendererMixin"
+    "muzzler.SilencedHudMixin"
   ]
 }
