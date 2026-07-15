@@ -2,6 +2,7 @@ package org.aussiebox.starexpress;
 
 import dev.doctor4t.wathe.cca.GameWorldComponent;
 import dev.doctor4t.wathe.cca.PlayerMoodComponent;
+import dev.doctor4t.wathe.api.task.TaskCompletionApi;
 import dev.doctor4t.wathe.game.GameFunctions;
 import dev.doctor4t.wathe.record.GameRecordManager;
 import net.fabricmc.api.ModInitializer;
@@ -51,12 +52,32 @@ public class StarryExpress implements ModInitializer {
         StarryExpressRoles.init();
         StarryExpressModifiers.init();
         StarryExpressReplayFormatters.register();
+        registerTaskCompletionApi();
 
         PayloadTypeRegistry.playC2S().register(AbilityC2SPacket.TYPE, AbilityC2SPacket.CODEC);
 
         registerPackets();
         registerEvents();
         registerParticles();
+    }
+
+    private static void registerTaskCompletionApi() {
+        /*
+         * 星界使者的冷却缩减只应该在任务真正完成时触发。
+         * 旧 mixin 监听 setMood，因此只要心情值上涨就可能误判；
+         * 现在改用 Wathe 任务完成 API，假如后续任务奖励心情的实现再次调整，也不会影响这个职业效果。
+         */
+        TaskCompletionApi.AFTER_TASK_COMPLETE.register(context -> {
+            if (context.role() != StarryExpressRoles.STARSTRUCK) {
+                return;
+            }
+            if (!CONFIG.starstruckConfig.taskReducesCooldown()) {
+                return;
+            }
+
+            AbilityComponent ability = AbilityComponent.KEY.get(context.player());
+            ability.changeCooldown(-(CONFIG.starstruckConfig.taskCooldownReduction() * 20));
+        });
     }
 
     public void registerPackets() {
