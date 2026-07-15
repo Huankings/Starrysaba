@@ -19,8 +19,6 @@
     "requireAnnotations": true
   },
   "mixins": [
-    "GetTargetMixin",
-    "PlayerEntityMixin",
-    "muzzler.SilencedHudMixin"
+    "PlayerEntityMixin"
   ]
 }
