@@ -28,6 +28,7 @@ import org.aussiebox.starexpress.client.particle.StarstruckSparkleParticle;
 import org.aussiebox.starexpress.client.render.blockentity.PlushBlockEntityRenderer;
 import org.aussiebox.starexpress.client.role_name.StarryRoleNameHudHandlers;
 import org.aussiebox.starexpress.client.roles.starstruck.StarstruckMoodHud;
+import org.aussiebox.starexpress.client.visibility.StarryHeldItemVisibilityHandlers;
 import org.aussiebox.starexpress.packet.AbilityC2SPacket;
 import org.aussiebox.starexpress.packet.OpenConfigS2CPacket;
 import org.lwjgl.glfw.GLFW;
@@ -42,6 +43,7 @@ public class StarryExpressClient implements ClientModInitializer {
         StarryInstinctHandlers.register();
         StarryRoleNameHudHandlers.register();
         StarstruckMoodHud.register();
+        StarryHeldItemVisibilityHandlers.register();
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), ModBlocks.CIRCUITWEAVER_PLUSH);
         BlockEntityRenderers.register(ModBlockEntities.PLUSH, PlushBlockEntityRenderer::new);
