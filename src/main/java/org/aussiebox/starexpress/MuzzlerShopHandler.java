@@ -30,6 +30,8 @@ public final class MuzzlerShopHandler {
         /*
          * 不直接 add/remove 重排整张表，而是精确替换 REVOLVER 所在格子。
          * 这样客户端看到的位置仍是“默认手枪位”，但商品变成 Muzzler 的专属胶带。
+         * 其他没有被替换的默认条目继续保留原 ShopPrice，所以匕首、开锁器、疯魔模式
+         * 会自动读取 Wathe 当前的任务币/多货币价格。
          */
         replaceItem(entries, WatheItems.REVOLVER, new ShopEntry(
                 StarryExpressItems.TAPE.getDefaultInstance(),
