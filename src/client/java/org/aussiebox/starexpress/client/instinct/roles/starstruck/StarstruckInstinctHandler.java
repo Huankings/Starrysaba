@@ -18,9 +18,12 @@ public final class StarstruckInstinctHandler {
         InstinctApi.registerAvailability(StarryExpress.id("instinct/starstruck"), InstinctApi.DEFAULT_PRIORITY, viewer -> {
             GameWorldComponent gameWorld = GameWorldComponent.KEY.get(viewer.level());
             StarstruckComponent component = StarstruckComponent.KEY.get(viewer);
-            if (gameWorld.isRole(viewer, StarryExpressRoles.STARSTRUCK) && component.ticks > 0) {
+            if (GameFunctions.isPlayerAliveAndSurvival(viewer)
+                    && gameWorld.isRole(viewer, StarryExpressRoles.STARSTRUCK)
+                    && component.ticks > 0) {
                 /*
                  * Starstruck 技能期间临时开启本能资格。
+                 * 资格只对存活 Starstruck 生效；死亡后保留的 ticks/角色数据不能继续驱动自己的本能。
                  * 资格和颜色分开注册，后续只改颜色时不需要再碰开启条件。
                  */
                 return InstinctApi.AvailabilityResult.ENABLE;
@@ -35,11 +38,13 @@ public final class StarstruckInstinctHandler {
 
             GameWorldComponent gameWorld = GameWorldComponent.KEY.get(viewer.level());
             StarstruckComponent component = StarstruckComponent.KEY.get(viewer);
-            if (gameWorld.isRole(viewer, StarryExpressRoles.STARSTRUCK)
+            if (GameFunctions.isPlayerAliveAndSurvival(viewer)
+                    && gameWorld.isRole(viewer, StarryExpressRoles.STARSTRUCK)
                     && component.ticks > 0
                     && WatheClient.isInstinctEnabled()) {
                 /*
                  * Starstruck 的颜色显示依赖最终本能资格。
+                 * viewer 死亡后不再显示 Starstruck 技能色，避免抢在观察者职业色之前返回。
                  * 这样其它扩展用 availability DISABLE 压住本能时，这里不会绕过压制继续发光。
                  */
                 return InstinctApi.HighlightResult.color(StarryExpressRoles.STARSTRUCK.color());
