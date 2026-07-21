@@ -51,6 +51,7 @@
   "guidebook.namespace.starexpress": "Starry Express",
   "guidebook.namespace.noellesroles": "Noelle's Roles",
   "guidebook.namespace.stupid_express": "Stupid Express",
+  "guidebook.namespace.kinswathe":"kinswathe",
 
   "guidebook.parameter.setting": "Harpy Express",
 
@@ -78,6 +79,19 @@
   "guidebook.role.noellesroles:jester": "Jester",
       "guidebook.role.title.noellesroles:jester": "The Exiled Trickster",
       "guidebook.role.description.noellesroles:jester": "The Jester has come from a far-off kingdom, having expended their time as their king's servant. They now seek to play one final trick that will go down in history.\n\nUpon being shot, the Jester will enter Psycho Mode (much like the ability Killers can purchase), causing bodies to hit the floor wherever they pass by.\n\nThankfully, other than that, they cannot inflict any damage themselves. Still, think before you shoot!",
+  "guidebook.role.noellesroles:dreamer": "Dreamer",
+  "guidebook.role.title.noellesroles:dreamer": "Illusion Weaver",
+  "guidebook.role.description.noellesroles:dreamer": "The Dreamer serves the killer organization, walking between reality and illusion.\n\nStarts with Dream Imprint, which can be used on a target, allowing them to withstand one extra attack.\n\nWhen a marked target takes damage, they are instantly teleported back to the Dreamer, and the Dreamer gains one count toward the number of non-killer players who have taken the Illusion Reagent.\n\nThe number of non-killer players required to take the Illusion Reagent is one-quarter of the total players. When enough non-killer players have taken it, the Dreamer's identity transforms into a killer.\n\nTo the Dreamer, reality is merely a dream that can be rewritten.",
+  "guidebook.role.noellesroles:hacker": "Hacker",
+  "guidebook.role.title.noellesroles:hacker": "Shadow Supporter",
+  "guidebook.role.description.noellesroles:hacker": "The Hacker is a technical elite working in the shadows to help killers achieve their winning goal.\n\nThe Hacker equips all killers with phones, enabling remote communication.\n\nCracking roles is also a skill a hacker should possess. After staring at a player long enough, they can crack that player's role, send it to all killers' phones, and get coins.\n\nThe Hacker can also use technology to help killers turn off lights, refresh weapon or ability cooldowns, and clear potion effects from them.\n\nRemember, the Hacker needs to stay undercover. Never reveal your role to civilians too early...",
+  "guidebook.role.noellesroles:cook": "Cook",
+  "guidebook.role.title.noellesroles:cook": "Frying Pan Master",
+  "guidebook.role.description.noellesroles:cook": "The most popular person on the train, after all, who does not want a hot meal during the trip?\n\nThe pan is not just for cooking. In critical moments, it can stun enemies, and it can even block bullets.\n\nWhenever a passenger eats food, the Cook can briefly see their location.\n\nRemember, the Cook is still an ordinary person. Do not chase killers with a pan...",
+  "guidebook.role.noellesroles:physician": "Physician",
+  "guidebook.role.title.noellesroles:physician": "Angel in White",
+  "guidebook.role.description.noellesroles:physician": "The most trustworthy person on the train, sworn to heal the wounded and save the dying.\n\nThe Physician can see poisoned or hallucinating passengers and has a longer sprint time to reach patients in emergencies. Reading the cause of death from bodies is also part of the job.\n\nStarts with a Medical Kit, which can clear a player's abnormal status and grants a reward when used successfully.\n\nPills can be bought in the shop. Taking one lets the Physician withstand one blockable lethal attack.",
+
   "guidebook.role.noellesroles:executioner": "Executioner",
       "guidebook.role.title.noellesroles:executioner": "The Determined Hitman",
       "guidebook.role.description.noellesroles:executioner": "The Executioner has boarded the %1$s awaiting a specific passenger's demise.\n\nWhile they cannot inflict any damage themselves, they have access to a plethora of tools to toy with their victim.\n\nAs long as their victim does not fall to a passenger the Executioner may wish to work with, when the victim dies, the Executioner will become a random killer role.\n\nInterestingly, the Executioner does not have Instinct, nor can they see who is a killer alongside them until their target is executed.",
