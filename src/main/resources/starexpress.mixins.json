@@ -4,10 +4,8 @@
   "package": "org.aussiebox.starexpress.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "GameFunctionsMixin",
     "allergic.AllergicEatMixin",
-    "allergic.AllergicGameFunctionsMixin",
-    "muzzler.MuzzlerBatHitSoundMixin"
+    "allergic.AllergicGameFunctionsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

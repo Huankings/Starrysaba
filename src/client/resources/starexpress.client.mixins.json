@@ -6,10 +6,7 @@
   "client": [
     "CreativeModeInventoryScreenMixin",
     "InventoryScreenMixin",
-    "LimitedInventoryScreenMixin",
-    "muzzler.MuzzlerPsychoDroneMixin",
-    "muzzler.MuzzlerPsychoDroneLoopMixin",
-    "starstruck.StarstruckHudMixin"
+    "LimitedInventoryScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -17,7 +14,5 @@
   "overwrites": {
     "requireAnnotations": true
   },
-  "mixins": [
-    "PlayerEntityMixin"
-  ]
+  "mixins": []
 }

@@ -1,9 +1,5 @@
 package org.aussiebox.starexpress.client.visibility;
 
-import dev.doctor4t.wathe.api.client.invisibility.HeldItemInvisibilityApi;
-import org.aussiebox.starexpress.StarryExpressRoles;
-import org.aussiebox.starexpress.item.StarryExpressItems;
-
 /**
  * StarryExpress 接入 Wathe 手持物不可见 API 的统一注册处。
  *
@@ -15,7 +11,6 @@ public final class StarryHeldItemVisibilityHandlers {
     }
 
     public static void register() {
-        // 胶带是 Muzzler 的专属隐蔽物品，Wathe 会统一处理主手/副手和手臂姿势。
-        HeldItemInvisibilityApi.registerHiddenItem(StarryExpressRoles.MUZZLER, StarryExpressItems.TAPE);
+        // 静语者和胶带已搬到 NoellesRoles，手持隐藏规则也由 NoellesRoles 注册。
     }
 }

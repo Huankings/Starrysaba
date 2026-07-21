@@ -78,12 +78,17 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     def localWatheJar = findLatestLocalModJar("wathe")
     def localHarpyJar = findLatestLocalModJar("harpymodloader")
+    def localNoellesJar = findLatestLocalModJar("noellesroles")
     // 先走本地联调 jar，找不到时再回退到 Maven 坐标，兼顾开发联调和纯净环境构建。
     modApi(localWatheJar != null ? files(localWatheJar) : "dev.doctor4t:wathe:${project.wathe_version}")
     modApi(localHarpyJar != null ? files(localHarpyJar) : "maven.modrinth:harpymodloader:${project.harpy_mod_loader_version}")
 
     modApi "maven.modrinth:stupid-express:${project.stupid_express_version}"
-    modApi "maven.modrinth:noelles-roles-tmm:${project.noelles_roles_version}"
+    /*
+     * 绿皮书需要读取 NoellesRoles 里星界使者/静语者的常量 getter。
+     * 因此这里也优先使用 libs 中刚编译出来的 NoellesRoles jar，确保显示数值和搬运后的职业逻辑同步。
+     */
+    modApi(localNoellesJar != null ? files(localNoellesJar) : "maven.modrinth:noelles-roles-tmm:${project.noelles_roles_version}")
 
     modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-base:${project.cca_version}"
     modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
@@ -91,13 +96,8 @@ dependencies {
     modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-scoreboard:${project.cca_version}"
     modImplementation "dev.doctor4t:ratatouille:${project.ratatouille_version}"
 
-    implementation "de.maxhenkel.voicechat:voicechat-api:${voicechat_api_version}"
-
     annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
     include "io.wispforest:owo-sentinel:${project.owo_version}"
-
-    modRuntimeOnly "maven.modrinth:simple-voice-chat:fabric-${voicechat_version}"
-    modRuntimeOnly "de.maxhenkel.voicechat:voicechat-api:${voicechat_api_version}:fabric-stub"
 
     modRuntimeOnly("me.djtheredstoner:DevAuth-${devauth_module}:${devauth_version}")
 }

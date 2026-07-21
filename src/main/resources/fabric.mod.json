@@ -21,18 +21,12 @@
     ],
     "cardinal-components": [
       "org.aussiebox.starexpress.StarryExpressComponents"
-    ],
-    "voicechat": [
-      "org.aussiebox.starexpress.voice.StarryExpressVoiceChatPlugin"
     ]
   },
 
   "custom": {
     "cardinal-components": [
-      "starexpress:ability",
-      "starexpress:starstruck",
-      "starexpress:allergic",
-      "starexpress:silence"
+      "starexpress:allergic"
     ]
   },
 
@@ -49,6 +43,7 @@
     "fabric-api": "*",
     "minecraft": "${minecraft_version}",
     "wathe": "*",
-    "harpymodloader": "*"
+    "harpymodloader": "*",
+    "noellesroles": "*"
   }
 }

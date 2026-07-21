@@ -1,30 +1,6 @@
 {
-  "key.starexpress.ability": "技能",
-  "tip.starexpress.cooldown": "技能在 %s 秒后可用",
-
   "block.starexpress.circuitweaver_plush": "Circuitweaver毛绒玩具",
   "block.starexpress.jade_plush": "翡翠毛绒玩具",
-  "item.starexpress.tape": "胶带",
-      "item.starexpress.tape.tooltip.1": "用来封住其它玩家的嘴。",
-      "item.starexpress.tape.tooltip.2": "被封住嘴的玩家在外面待太久会窒息。",
-      "item.starexpress.tape.tooltip.3": "其他人无法看到手中的胶带",
-      "subtitles.starexpress.item.tape_apply": "有谁正在使用胶带",
-
-  "announcement.role.starexpress.starstruck": "星界使者",
-  "announcement.goals.starexpress.starstruck": "在关键时刻发挥你的真正实力",
-  "tip.starexpress.starstruck": "按下 %s 键使用星界能力",
-  "replay.skill_use.starexpress.starstruck": "%s 发动了星界能力",
-  "replay.global.starexpress.starstruck_end": "%s 的星界能力时间结束",
-
-  "announcement.role.starexpress.muzzler": "静语者",
-  "announcement.goals.starexpress.muzzler": "阻止乘客告密...",
-  "death_reason.starexpress.silenced_and_outside": "窒息而死",
-  "death_reason.starexpress.tape_removed_low_mood": "由于心情过于低落而死",
-  "tip.starexpress.muzzler.silenced": "被堵住了嘴",
-  "replay.item_use.starexpress.tape": "%s 给 %s 贴上了胶带",
-  "replay.global.starexpress.tape_removed": "%s 撕下了贴在 %s 上的 %s 的胶带",
-  "replay.death.starexpress.silenced_and_outside.died": "%s 因 %s 贴上的胶带在户外窒息而死",
-  "replay.death.starexpress.tape_removed_low_mood.died": "%s 因 %s 在撕掉 %s 的胶带的过程中痛苦而亡",
 
   "announcement.modifier.allergic": "过敏患者",
   "hud.allergic.hint": "过敏患者",
@@ -62,13 +38,16 @@
       "guidebook.role.title.wathe:killer": "无坚不摧",
       "guidebook.role.description.wathe:killer": "对世界充满恶意，想让世界上所有不理解自己的人全部消失。他们唯一的任务就是杀死魔女岛上所有非杀手阵营的乘客。\n\n也许他们的童年过的并不美好...",
 
-  "guidebook.role.starexpress:starstruck": "星界使者",
-      "guidebook.role.title.starexpress:starstruck": "加冕的天文学家",
-      "guidebook.role.description.starexpress:starstruck": "一名爱好和平的乘客，拥有奇迹般的能力，想要帮助他人，却经常不被理解显得格格不入。\n\n每间隔 %2$s 秒，星界使者可以激活他的能力，获得 %3$s 秒的透视本能与更快的移动速度。但这样会暴露自己的身份，将自己暴露在危险之中。",
-      "guidebook.role.description.starexpress:starstruck.cooldown_decreased": "\n\n每完成一项任务，星界力的冷却时长将会减免 %s 秒。",
+  "guidebook.role.noellesroles:starstruck": "星界使者",
+      "guidebook.role.title.noellesroles:starstruck": "加冕的天文学家",
+      "guidebook.role.description.noellesroles:starstruck": "一名爱好和平的乘客，拥有奇迹般的能力，想要帮助他人，却经常不被理解显得格格不入。\n\n每间隔 %2$s 秒，星界使者可以激活他的能力，获得 %3$s 秒的透视本能与更快的移动速度。但这样会暴露自己的身份，将自己暴露在危险之中。",
+      "guidebook.role.description.noellesroles:starstruck.cooldown_decreased": "\n\n每完成一项任务，星界力的冷却时长将会减免 %s 秒。",
   "guidebook.role.starexpress:allergic": "过敏患者",
       "guidebook.role.title.starexpress:allergic": "家庭遗传",
       "guidebook.role.description.starexpress:allergic": "过敏患者的医疗记录证明，他有严重生理缺陷——无论是吃还是喝，都可能出现严重的副作用。\n\n过敏患者的过敏类型会在回合开始时随机选择\n\n在食用会导致过敏的食物或饮品后，过敏患者将会有\n%5$s/%4$s 的概率不会出现任何效果\n%6$s/%4$s 的概率获得 3 秒透视本能\n%7$s/%4$s 的概率获得一次攻击免疫\n%8$s/%4$s 的概率免疫毒药",
+  "guidebook.role.noellesroles:muzzler": "静语者",
+  "guidebook.role.title.noellesroles:muzzler": "沉默的收割者",
+  "guidebook.role.description.noellesroles:muzzler": "静语者是一个全副武装的杀手，不过这次他们带着的是胶带。我不是在开玩笑。\n\n花费 75 金币，静语者可以购买胶带，并用它封住一名玩家的嘴。\n\n如果被封住嘴的玩家在 %9$s 秒后仍停留在外，他们将会因空气不足而窒息死亡。\n\n可以通过点击 %10$s 次来移除被封住嘴玩家身上的胶带，但每次操作都会降低被封住嘴玩家的san值——如果因此san值被降至 0，他们会因痛苦而亡。\n\n同时，静语者在疯魔模式下，不会有疯魔音乐和球棒击打的声音。毕竟，在沉默中完成猎杀才是最出其不意的。",
 
   "guidebook.role.noellesroles:corpsemaker": "造尸怪",
   "guidebook.role.title.noellesroles:corpsemaker": "伪造尸体的怪物",
@@ -298,11 +277,6 @@
   "guidebook.role.northernlights:medium": "天秤",
       "guidebook.role.title.northernlights:medium": "灵魂召唤师",
       "guidebook.role.description.northernlights:medium": "",
-  "config.starexpress.server.category.roles": "职业/修饰符配置",
-  "config.starexpress.server.starstruck.reduce_cooldown": "减少任务完成时的技能冷却时间",
-  "config.starexpress.server.starstruck.ability_duration": "技能持续时间",
-  "guidebook.role.starexpress:muzzler": "静语者",
-  "guidebook.role.title.starexpress:muzzler": "沉默的收割者",
-  "guidebook.role.description.starexpress:muzzler": "静语者是一个全副武装的杀手,不过这次他们带着的是胶带。我不是在开玩笑。\n\n花费 75 金币,静语者可以购买胶带,并用它封住一名玩家的嘴。\n\n如果被封住嘴的玩家在 %9$s 秒后仍停留在外,他们将会因空气不足而窒息死亡。\n\n可以通过点击 %10$s 次来移除被封住嘴玩家身上的胶带,但每次操作都会降低被封住嘴玩家的san值——如果因此san值被降至 0,他们会因痛苦而亡。\n\n同时，静语者在疯魔模式下，不会有疯魔音乐和球棒击打的声音。毕竟，在沉默中完成猎杀才是最出其不意的"
+  "config.starexpress.server.category.roles": "职业/修饰符配置"
 
 }

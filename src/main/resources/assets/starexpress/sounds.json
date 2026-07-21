@@ -4,13 +4,5 @@
       "starexpress:block/circuitweaver_plush_honk"
     ],
     "subtitle": "subtitles.ratatouille.block.plush_honk"
-  },
-  "item.tape.apply": {
-    "sounds": [
-      "starexpress:item/tape_apply_1",
-      "starexpress:item/tape_apply_2",
-      "starexpress:item/tape_apply_3"
-    ],
-    "subtitle": "subtitles.starexpress.item.tape_apply"
   }
 }

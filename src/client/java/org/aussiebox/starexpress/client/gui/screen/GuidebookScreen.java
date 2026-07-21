@@ -23,6 +23,8 @@ import net.minecraft.world.entity.player.Player;
 import org.agmas.harpymodloader.component.WorldModifierComponent;
 import org.agmas.harpymodloader.modifiers.HMLModifiers;
 import org.agmas.harpymodloader.modifiers.Modifier;
+import org.agmas.noellesroles.roles.muzzler.MuzzlerConstants;
+import org.agmas.noellesroles.roles.starstruck.StarstruckConstants;
 import org.aussiebox.starexpress.StarryExpress;
 import org.aussiebox.starexpress.config.StarryExpressServerConfig;
 import org.aussiebox.starexpress.util.RoleInfo;
@@ -261,22 +263,24 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
                 "guidebook.role.description." + roleID,
 
                 Component.translatable("guidebook.parameter.setting"),
-                StarryExpress.CONFIG.starstruckConfig.abilityCooldown(),
-                StarryExpress.CONFIG.starstruckConfig.abilityDuration(),
+                // 星界使者已搬到 NoellesRoles，这里通过 getter 运行时读取 NoellesRoles 当前常量，避免绿皮书继续依赖 Starry 旧配置。
+                StarstruckConstants.guidebookAbilityCooldownSeconds(),
+                StarstruckConstants.guidebookAbilityDurationSeconds(),
                 allergicConfig.nothingChance() + allergicConfig.instinctChance() + allergicConfig.armorChance() + allergicConfig.poisonChance(),
                 allergicConfig.nothingChance(),
                 allergicConfig.instinctChance(),
                 allergicConfig.armorChance(),
                 allergicConfig.poisonChance(),
-                StarryExpress.CONFIG.muzzlerConfig.suffocationTime(),
-                StarryExpress.CONFIG.muzzlerConfig.tapeTearCheckCount()
+                // 静语者同样已搬到 NoellesRoles，说明文本只读取 NoellesRoles 的职业常量。
+                MuzzlerConstants.guidebookSuffocationSeconds(),
+                MuzzlerConstants.guidebookTapeTearCheckCount()
         ));
 
-        if (Objects.equals(roleID, "starexpress:starstruck")) {
-            if (StarryExpress.CONFIG.starstruckConfig.taskReducesCooldown()) {
+        if (Objects.equals(roleID, "noellesroles:starstruck")) {
+            if (StarstruckConstants.guidebookTaskReducesCooldown()) {
                 roleDescription.text(roleDescription.text().copy().append(Component.translatable(
-                        "guidebook.role.description.starexpress:starstruck.cooldown_decreased",
-                        StarryExpress.CONFIG.starstruckConfig.taskCooldownReduction()
+                        "guidebook.role.description.noellesroles:starstruck.cooldown_decreased",
+                        StarstruckConstants.guidebookTaskCooldownReductionSeconds()
                 )));
             }
         }

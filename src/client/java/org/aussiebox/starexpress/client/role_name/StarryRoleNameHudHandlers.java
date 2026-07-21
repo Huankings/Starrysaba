@@ -1,7 +1,5 @@
 package org.aussiebox.starexpress.client.role_name;
 
-import org.aussiebox.starexpress.client.role_name.roles.muzzler.MuzzlerSilencedTipHudHandler;
-
 /**
  * StarryExpress 接入 Wathe RoleName HUD API 的总入口。
  *
@@ -13,6 +11,6 @@ public final class StarryRoleNameHudHandlers {
     }
 
     public static void register() {
-        MuzzlerSilencedTipHudHandler.register();
+        // 静语者的“被堵住嘴”名字提示已经搬到 NoellesRoles，这里不再注册 Starry 旧 handler。
     }
 }
