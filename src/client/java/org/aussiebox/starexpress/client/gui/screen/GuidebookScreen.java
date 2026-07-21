@@ -23,7 +23,9 @@ import net.minecraft.world.entity.player.Player;
 import org.agmas.harpymodloader.component.WorldModifierComponent;
 import org.agmas.harpymodloader.modifiers.HMLModifiers;
 import org.agmas.harpymodloader.modifiers.Modifier;
+import org.agmas.noellesroles.roles.avaricious.AvariciousConstants;
 import org.agmas.noellesroles.roles.muzzler.MuzzlerConstants;
+import org.agmas.noellesroles.roles.necromancer.NecromancerConstants;
 import org.agmas.noellesroles.roles.starstruck.StarstruckConstants;
 import org.aussiebox.starexpress.StarryExpress;
 import org.aussiebox.starexpress.config.StarryExpressServerConfig;
@@ -31,7 +33,6 @@ import org.aussiebox.starexpress.util.RoleInfo;
 import org.aussiebox.starexpress.util.RoleInfo.GuidebookEntry;
 import org.aussiebox.starexpress.util.RoleInfo.RoleType;
 import org.jetbrains.annotations.NotNull;
-import pro.fazeclan.river.stupid_express.constants.SERoles;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -67,8 +68,8 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
     public Map<String, String> roleCreators = new HashMap<>();
     public Map<String, String> getRoleCreators() {
 
-        if (FabricLoader.getInstance().isModLoaded("stupid_express")) {
-            roleCreators.putIfAbsent(String.valueOf(SERoles.AVARICIOUS.identifier()), "Sonicdude");
+        if (FabricLoader.getInstance().isModLoaded("noellesroles")) {
+            roleCreators.putIfAbsent("noellesroles:avaricious", "Sonicdude");
         }
 
         return roleCreators;
@@ -273,7 +274,11 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
                 allergicConfig.poisonChance(),
                 // 静语者同样已搬到 NoellesRoles，说明文本只读取 NoellesRoles 的职业常量。
                 MuzzlerConstants.guidebookSuffocationSeconds(),
-                MuzzlerConstants.guidebookTapeTearCheckCount()
+                MuzzlerConstants.guidebookTapeTearCheckCount(),
+                // 扒手和死灵法师已从 StupidExpress 搬到 NoellesRoles，绿皮书同步读取搬运后的职业常量。
+                AvariciousConstants.guidebookMaxDistance(),
+                AvariciousConstants.guidebookPayoutPerPlayer(),
+                NecromancerConstants.guidebookReviveCooldownMinutes()
         ));
 
         if (Objects.equals(roleID, "noellesroles:starstruck")) {
