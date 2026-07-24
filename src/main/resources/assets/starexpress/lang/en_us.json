@@ -144,6 +144,12 @@
   "guidebook.role.noellesroles:feather": "Feather",
       "guidebook.role.title.noellesroles:feather": "The Light Footed",
       "guidebook.role.description.noellesroles:feather": "The Feather has mastered the art of aerodynamics and staying out of the way of others.\n\nThe Feather cannot collide with other players, and falls slowly.\nThese unique abilities allow the Feather to fall off the side of the train and still have time to save themselves.",
+  "guidebook.role.noellesroles:magnate": "Magnate",
+      "guidebook.role.title.noellesroles:magnate": "Fortune's Favorite",
+      "guidebook.role.description.noellesroles:magnate": "The Magnate is the wealthiest person on the train, his pockets always full of endless coins.\n\nThe Magnate's passive income is twice that of other characters.",
+  "guidebook.role.noellesroles:taskmaster": "Taskmaster",
+      "guidebook.role.title.noellesroles:taskmaster": "More Work, More Pay",
+      "guidebook.role.description.noellesroles:taskmaster": "Hard work pays off; the Taskmaster's income is tied to tasks.\n\nIf the Taskmaster is on the killer team, completing a task rewards 50 coins.\n\nIf on the non-killer team, completing a task grants an additional 25 coins on top of the regular reward.",
 
   "guidebook.role.noellesroles:amnesiac": "Amnesiac",
       "guidebook.role.title.noellesroles:amnesiac": "Hider of True Colors",
