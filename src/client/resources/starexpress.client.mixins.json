@@ -3,11 +3,7 @@
   "minVersion": "0.8",
   "package": "org.aussiebox.starexpress.client.mixin",
   "compatibilityLevel": "JAVA_21",
-  "client": [
-    "CreativeModeInventoryScreenMixin",
-    "InventoryScreenMixin",
-    "LimitedInventoryScreenMixin"
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   },

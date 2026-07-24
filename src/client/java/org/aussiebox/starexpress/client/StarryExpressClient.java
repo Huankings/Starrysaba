@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import org.aussiebox.starexpress.block.ModBlocks;
 import org.aussiebox.starexpress.block.entity.ModBlockEntities;
+import org.aussiebox.starexpress.client.inventory.StarryInventoryButtons;
 import org.aussiebox.starexpress.client.instinct.StarryInstinctHandlers;
 import org.aussiebox.starexpress.client.render.blockentity.PlushBlockEntityRenderer;
 import org.aussiebox.starexpress.packet.OpenConfigS2CPacket;
@@ -24,6 +25,8 @@ public class StarryExpressClient implements ClientModInitializer {
          * StarryExpress 客户端只继续注册 allergic 本能、装饰方块渲染和自己的配置界面网络包。
          */
         StarryInstinctHandlers.register();
+        // 图鉴按钮统一接入 Wathe 背包按钮 API，覆盖 LIMITED / VANILLA / CREATIVE 三种背包界面。
+        StarryInventoryButtons.register();
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(), ModBlocks.CIRCUITWEAVER_PLUSH);
         BlockEntityRenderers.register(ModBlockEntities.PLUSH, PlushBlockEntityRenderer::new);
