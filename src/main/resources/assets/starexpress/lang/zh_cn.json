@@ -2,13 +2,6 @@
   "block.starexpress.circuitweaver_plush": "Circuitweaver毛绒玩具",
   "block.starexpress.jade_plush": "翡翠毛绒玩具",
 
-  "announcement.modifier.allergic": "过敏患者",
-  "hud.allergic.hint": "过敏患者",
-  "death_reason.starexpress.allergies": "神秘的过敏症",
-  "hud.allergic.effect.instinct": "眼前的世界好像变得更加清晰了",
-  "hud.allergic.effect.armor": "我感觉自己势不可挡!",
-  "hud.allergic.effect.poison": "... 我感觉不太对劲。",
-
   "guidebook.tooltip.open": "打开指南书",
   "guidebook.category.roles": "角色身份",
       "guidebook.category.roles.good": "平民阵营",
@@ -42,10 +35,7 @@
       "guidebook.role.title.noellesroles:starstruck": "加冕的天文学家",
       "guidebook.role.description.noellesroles:starstruck": "一名爱好和平的乘客，拥有奇迹般的能力，想要帮助他人，却经常不被理解显得格格不入。\n\n每间隔 %2$s 秒，星界使者可以激活他的能力，获得 %3$s 秒的透视本能与更快的移动速度。但这样会暴露自己的身份，将自己暴露在危险之中。",
       "guidebook.role.description.noellesroles:starstruck.cooldown_decreased": "\n\n每完成一项任务，星界力的冷却时长将会减免 %s 秒。",
-  "guidebook.role.starexpress:allergic": "过敏患者",
-      "guidebook.role.title.starexpress:allergic": "家庭遗传",
-      "guidebook.role.description.starexpress:allergic": "过敏患者的医疗记录证明，他有严重生理缺陷——无论是吃还是喝，都可能出现严重的副作用。\n\n过敏患者的过敏类型会在回合开始时随机选择\n\n在食用会导致过敏的食物或饮品后，过敏患者将会有\n%5$s/%4$s 的概率不会出现任何效果\n%6$s/%4$s 的概率获得 3 秒透视本能\n%7$s/%4$s 的概率获得一次攻击免疫\n%8$s/%4$s 的概率免疫毒药",
-  "guidebook.role.noellesroles:muzzler": "静语者",
+    "guidebook.role.noellesroles:muzzler": "静语者",
   "guidebook.role.title.noellesroles:muzzler": "沉默的收割者",
   "guidebook.role.description.noellesroles:muzzler": "静语者是一个全副武装的杀手，不过这次他们带着的是胶带。我不是在开玩笑。\n\n花费 75 金币，静语者可以购买胶带，并用它封住一名玩家的嘴。\n\n如果被封住嘴的玩家在 %9$s 秒后仍停留在外，他们将会因空气不足而窒息死亡。\n\n可以通过点击 %10$s 次来移除被封住嘴玩家身上的胶带，但每次操作都会降低被封住嘴玩家的san值——如果因此san值被降至 0，他们会因痛苦而亡。\n\n同时，静语者在疯魔模式下，不会有疯魔音乐和球棒击打的声音。毕竟，在沉默中完成猎杀才是最出其不意的。",
 
@@ -231,6 +221,13 @@
   "guidebook.role.noellesroles:taskmaster": "任务大师",
   "guidebook.role.title.noellesroles:taskmaster": "完成任务的决心",
   "guidebook.role.description.noellesroles:taskmaster": "任务大师从来不会辜负每一个任务的期待，因为他们坚信付出就有回报。\n\n当杀手完成任务的时候可以获得50金币，当好人完成任务的时候可额外获得25金币。",
+  "guidebook.role.noellesroles:violator": "违禁者",
+  "guidebook.role.title.noellesroles:violator": "秩序的破坏者",
+  "guidebook.role.description.noellesroles:violator": "他们从不遵守规矩，这一次，他们打破了规矩：可以在车上跳跃。\n\n没人知道他们如何打破的规矩，也不知道以后他们能打破什么规矩...",
+  "guidebook.role.noellesroles:allergic": "过敏患者",
+  "guidebook.role.title.noellesroles:allergic": "家庭遗传",
+  "guidebook.role.description.noellesroles:allergic": "过敏患者的医疗记录证明，他有严重生理缺陷——无论是吃还是喝，都可能出现严重的副作用。\n\n过敏患者的过敏类型会在回合开始时随机选择\n\n在食用会导致过敏的食物或饮品后，过敏患者将会有\n%5$s/%4$s 的概率不会出现任何效果\n%6$s/%4$s 的概率获得 %14$s 秒透视本能\n%7$s/%4$s 的概率获得一次攻击免疫\n%8$s/%4$s 的概率免疫毒药",
+
 
   "guidebook.role.stupid_express:dual_personality": "双重人格",
   "guidebook.role.title.stupid_express:dual_personality": "精神分裂",
@@ -258,9 +255,6 @@
   "guidebook.role.title.kinswathe:licensed_villain": "失去良知的屠杀者",
   "guidebook.role.description.kinswathe:licensed_villain": "也许曾经有正义过，但是面对社会的黑暗后选择堕入魔道，发誓要杀死所有所见之人，这把左轮手枪便是你唯一的伙伴。",
 
-  "guidebook.role.kinswathe:violator": "违禁者",
-  "guidebook.role.title.kinswathe:violator": "秩序的破坏者",
-  "guidebook.role.description.kinswathe:violator": "他们从不遵守魔女岛上的规矩，这一次，他们打破了规矩：可以在车上跳跃。\n\n没人知道他们如何打破的规矩，也不知道以后他们能打破什么规矩...",
 
   "guidebook.role.harpysimpleroles:poisoner": "毒师",
   "guidebook.role.title.harpysimpleroles:poisoner": "精湛的毒理学家",
@@ -287,7 +281,6 @@
       "guidebook.role.description.northernlights:wench": "",
   "guidebook.role.northernlights:medium": "天秤",
       "guidebook.role.title.northernlights:medium": "灵魂召唤师",
-      "guidebook.role.description.northernlights:medium": "",
-  "config.starexpress.server.category.roles": "职业/修饰符配置"
+      "guidebook.role.description.northernlights:medium": ""
 
 }

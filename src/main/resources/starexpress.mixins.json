@@ -3,10 +3,7 @@
   "minVersion": "0.8",
   "package": "org.aussiebox.starexpress.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "allergic.AllergicEatMixin",
-    "allergic.AllergicGameFunctionsMixin"
-  ],
+  "mixins": [],
   "injectors": {
     "defaultRequire": 1
   },

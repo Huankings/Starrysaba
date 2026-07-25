@@ -18,15 +18,6 @@
     ],
     "main": [
       "org.aussiebox.starexpress.StarryExpress"
-    ],
-    "cardinal-components": [
-      "org.aussiebox.starexpress.StarryExpressComponents"
-    ]
-  },
-
-  "custom": {
-    "cardinal-components": [
-      "starexpress:allergic"
     ]
   },
 

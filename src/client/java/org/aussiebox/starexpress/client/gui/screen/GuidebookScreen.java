@@ -24,11 +24,11 @@ import org.agmas.harpymodloader.component.WorldModifierComponent;
 import org.agmas.harpymodloader.modifiers.HMLModifiers;
 import org.agmas.harpymodloader.modifiers.Modifier;
 import org.agmas.noellesroles.roles.avaricious.AvariciousConstants;
+import org.agmas.noellesroles.modifiers.allergic.AllergicConstants;
 import org.agmas.noellesroles.roles.muzzler.MuzzlerConstants;
 import org.agmas.noellesroles.roles.necromancer.NecromancerConstants;
 import org.agmas.noellesroles.roles.starstruck.StarstruckConstants;
 import org.aussiebox.starexpress.StarryExpress;
-import org.aussiebox.starexpress.config.StarryExpressServerConfig;
 import org.aussiebox.starexpress.util.RoleInfo;
 import org.aussiebox.starexpress.util.RoleInfo.GuidebookEntry;
 import org.aussiebox.starexpress.util.RoleInfo.RoleType;
@@ -259,7 +259,6 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
             roleCredits.text(roleCredits.text().copy().append(Component.literal(" (")).withStyle(Style.EMPTY.withItalic(false)).append(Component.translatable("guidebook.role.creator")).append(roleCreators.get(roleID)).append(")"));
         }
 
-        StarryExpressServerConfig.AllergicConfig_ allergicConfig = StarryExpress.CONFIG.allergicConfig;
         roleDescription.text(Component.translatable(
                 "guidebook.role.description." + roleID,
 
@@ -267,18 +266,20 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
                 // 星界使者已搬到 NoellesRoles，这里通过 getter 运行时读取 NoellesRoles 当前常量，避免绿皮书继续依赖 Starry 旧配置。
                 StarstruckConstants.guidebookAbilityCooldownSeconds(),
                 StarstruckConstants.guidebookAbilityDurationSeconds(),
-                allergicConfig.nothingChance() + allergicConfig.instinctChance() + allergicConfig.armorChance() + allergicConfig.poisonChance(),
-                allergicConfig.nothingChance(),
-                allergicConfig.instinctChance(),
-                allergicConfig.armorChance(),
-                allergicConfig.poisonChance(),
+                // 过敏患者也已迁移到 NoellesRoles，概率与持续时间统一读取迁移后的词条常量。
+                AllergicConstants.guidebookTotalChance(),
+                AllergicConstants.guidebookNothingChance(),
+                AllergicConstants.guidebookInstinctChance(),
+                AllergicConstants.guidebookShieldChance(),
+                AllergicConstants.guidebookPoisonChance(),
                 // 静语者同样已搬到 NoellesRoles，说明文本只读取 NoellesRoles 的职业常量。
                 MuzzlerConstants.guidebookSuffocationSeconds(),
                 MuzzlerConstants.guidebookTapeTearCheckCount(),
                 // 扒手和死灵法师已从 StupidExpress 搬到 NoellesRoles，绿皮书同步读取搬运后的职业常量。
                 AvariciousConstants.guidebookMaxDistance(),
                 AvariciousConstants.guidebookPayoutPerPlayer(),
-                NecromancerConstants.guidebookReviveCooldownMinutes()
+                NecromancerConstants.guidebookReviveCooldownMinutes(),
+                AllergicConstants.guidebookInstinctDurationSeconds()
         ));
 
         if (Objects.equals(roleID, "noellesroles:starstruck")) {
