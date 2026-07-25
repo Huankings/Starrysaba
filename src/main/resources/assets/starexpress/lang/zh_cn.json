@@ -209,9 +209,6 @@
   "guidebook.role.noellesroles:avaricious": "扒手",
       "guidebook.role.title.noellesroles:avaricious": "贪婪的杀人犯",
       "guidebook.role.description.noellesroles:avaricious": "扒手本质上是杀手同伙。\n虽然他的商店与其他杀手的商店完全一致，但是获取金币的唯一途径是在其他乘客附近活动。\"金币\" 会每分钟偷取一次。\n\n扒手会根据周围 %11$s 个方块半径内的乘客数量获得金币，每名符合条件的乘客提供 %12$s 金币。",
-  "guidebook.role.stupid_express:lovers": "恋人",
-      "guidebook.role.title.stupid_express:lovers": "苦命鸳鸯",
-      "guidebook.role.description.stupid_express:lovers": "恋人们是心灵相通的，如果其中一人陨落，另一人即会殉情而亡。\n\n恋人们总会成对出现，要么他们都所属平民阵营，要么所属不同阵营，据说两位杀手不可能会爱上彼此。\n\n如果这项词条被开启，则会选择两名乘客爱上彼此成为恋人。",
   "guidebook.role.stupid_express:initiate": "初学者",
       "guidebook.role.title.stupid_express:initiate": "复仇心理",
       "guidebook.role.description.stupid_express:initiate": "初学者与一位宿敌共同登上了%1$s，他们唯一的愿望就是解决掉对方。\n\n初学者总是会出现两位，两位初学者必须互相竞争并赚取 200 金币来购买一把匕首击杀掉对方。\n在完成这项艰巨的杀人任务后，初学者将会随机成为新的杀手角色。\n\n如果其中一位初学者死于他人手下，或者是其他任何死因，则幸存的初学者将会随机变成杀手、中立角色或失忆患者(默认) (此选项可在Stupid Express的服务端配置文件中设定)",
@@ -227,11 +224,17 @@
   "guidebook.role.noellesroles:allergic": "过敏患者",
   "guidebook.role.title.noellesroles:allergic": "家庭遗传",
   "guidebook.role.description.noellesroles:allergic": "过敏患者的医疗记录证明，他有严重生理缺陷——无论是吃还是喝，都可能出现严重的副作用。\n\n过敏患者的过敏类型会在回合开始时随机选择\n\n在食用会导致过敏的食物或饮品后，过敏患者将会有\n%5$s/%4$s 的概率不会出现任何效果\n%6$s/%4$s 的概率获得 %14$s 秒透视本能\n%7$s/%4$s 的概率获得一次攻击免疫\n%8$s/%4$s 的概率免疫毒药",
+  "guidebook.role.noellesroles:lovers": "恋人",
+  "guidebook.role.title.noellesroles:lovers": "苦命鸳鸯",
+  "guidebook.role.description.noellesroles:lovers": "恋人们是心灵相通的，如果其中一人陨落，另一人即会殉情而亡。\n\n恋人们总会成对出现，要么他们都所属平民阵营，要么所属不同阵营，据说两位杀手不可能会爱上彼此。\n\n如果这项词条被开启，则会选择两名乘客爱上彼此成为恋人。",
+  "guidebook.role.noellesroles:dual_personality": "双重人格",
+  "guidebook.role.title.noellesroles:dual_personality": "精神分裂",
+  "guidebook.role.description.noellesroles:dual_personality": "有时候，也许是精神上的压力，也许是自己的扭曲，但是双重人格就这么如此的降临\n\n另一个自己总是扮演着不同的角色，但是无论是哪个自己，都已决意要处理掉所有的人\n\n当双重人格遇害并且没有保护他们的武器的时候，他们本身就会成为杀人武器\n\n双重人格受到伤害后，人格会真正意义上的分裂出来，形成两个存活的玩家，并进入“双活时刻”\n\n双活时刻期间，两个人格都会获得一把匕首和撬棍，并且解锁全能透视\n\n虽然分裂的人格只能存活可怜的一小段时间，但是他们可以通过杀死别人来延长\n\n当所有人被杀死殆尽后，双重人格将取得最终的胜利",
 
 
-  "guidebook.role.stupid_express:dual_personality": "双重人格",
-  "guidebook.role.title.stupid_express:dual_personality": "精神分裂",
-  "guidebook.role.description.stupid_express:dual_personality": "有时候，也许是精神上的压力，也许是自己的扭曲，但是双重人格就这么如此的降临\n\n另一个自己总是扮演着不同的角色，但是无论是哪个自己，都已决意要处理掉所有的人\n\n当双重人格遇害并且没有保护他们的武器的时候，他们本身就会成为杀人武器\n\n双重人格受到伤害后，人格会真正意义上的分裂出来，形成两个存活的玩家，并进入“双活时刻”\n\n双活时刻期间，两个人格都会获得一把匕首和撬棍，并且解锁全能透视\n\n虽然分裂的人格只能存活可怜的一小段时间，但是他们可以通过杀死别人来延长\n\n当所有人被杀死殆尽后，双重人格将取得最终的胜利",
+
+
+
 
   "guidebook.role.kinswathe:cook": "厨师",
   "guidebook.role.title.kinswathe:cook": "美食品鉴者",
