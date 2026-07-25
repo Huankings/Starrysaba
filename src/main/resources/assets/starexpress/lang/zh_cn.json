@@ -141,6 +141,10 @@
   "guidebook.role.noellesroles:thief": "小偷",
   "guidebook.role.title.noellesroles:thief": "小偷",
   "guidebook.role.description.noellesroles:thief": "一个中立杀手，目标是成为最后的幸存者。偷窃以求生存。空手时，按§e交互键§r（默认右键）对玩家进行交互，从其物品栏中窃取一件随机物品。每次成功偷窃会触发§e70 秒冷却§r。如果没有物品可偷，每次尝试仍会触发§e14 秒冷却§r。\n\n窃取§e左轮手枪§r、§e匕首§r、§e猎刀§r、§e飞斧§r或§e强盗手枪§r等关键武器后，只要场上仍有可用武器且小偷还活着，普通乘客/杀手结算就会被拖住。\n\n本能会高亮显示玩家和物品，可能标记出重要物品。所以请明智选择。空手会使你没有反击手段。",
+  "guidebook.role.noellesroles:licensed_villain": "执照恶棍",
+  "guidebook.role.title.noellesroles:licensed_villain": "持证上岗",
+  "guidebook.role.description.noellesroles:licensed_villain": "你要问我什么是正义？哈哈，正义可从来不是好人的专属。\n\n正义只属于愿意执行的人，而今天，我将带着这份正义，将你们杀光殆尽。",
+
 
 
   "guidebook.role.noellesroles:jester": "狂信者",
@@ -258,9 +262,6 @@
   "guidebook.role.kinswathe:kidnapper": "绑匪",
   "guidebook.role.title.kinswathe:kidnapper": "老练绑手",
   "guidebook.role.description.kinswathe:kidnapper": "作为老练的绑匪，迷药一直是他的专属物品，用迷药可以来迷晕人质并成为跟随自己待宰的羔羊",
-  "guidebook.role.kinswathe:licensed_villain": "执照恶棍",
-  "guidebook.role.title.kinswathe:licensed_villain": "失去良知的屠杀者",
-  "guidebook.role.description.kinswathe:licensed_villain": "也许曾经有正义过，但是面对社会的黑暗后选择堕入魔道，发誓要杀死所有所见之人，这把左轮手枪便是你唯一的伙伴。",
 
 
   "guidebook.role.harpysimpleroles:poisoner": "毒师",
