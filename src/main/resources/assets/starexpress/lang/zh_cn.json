@@ -144,6 +144,13 @@
   "guidebook.role.noellesroles:licensed_villain": "执照恶棍",
   "guidebook.role.title.noellesroles:licensed_villain": "持证上岗",
   "guidebook.role.description.noellesroles:licensed_villain": "你要问我什么是正义？哈哈，正义可从来不是好人的专属。\n\n正义只属于愿意执行的人，而今天，我将带着这份正义，将你们杀光殆尽。",
+  "guidebook.role.noellesroles:bounty_hunter": "赏金猎人",
+  "guidebook.role.title.noellesroles:bounty_hunter": "悬赏目标",
+  "guidebook.role.description.noellesroles:bounty_hunter": "看到了吗，那是你的目标\n\n干掉目标，拿走属于你的奖赏\n\n必要时候，你也可以购买赏金模式开启无情的杀戮\n\n比起传统的杀人手段，我想你会更喜欢这种对峙的感觉",
+  "guidebook.role.noellesroles:timekeeper": "时停者",
+  "guidebook.role.title.noellesroles:timekeeper": "扭转乾坤",
+  "guidebook.role.description.noellesroles:timekeeper": "时停者拥有者扭转乾坤的能力，时间对时停者来说是可掌握的\n\n时停者拥有特殊能力光阴，通过做任务获得，通过怀表使用键来切换能力\n\n第一层为物品加速，会将所有好人的物品冷却全部刷新到0，第二层则为技能加速，会将所有好人的技能冷却全部加速到0，冷却60s\n\n第三层为时空回溯，回溯到30s前的现状。冷却120s\n\n可在商店购买特殊回溯保护避免回溯一同影响\n\n时停者和敲钟人可以互相联动，敲钟人敲钟减少时停者的怀表冷却，而时停者可以和敲钟人一同不受回溯的影响\n\n普通怀表在时间回溯后会损坏，需要花金币修复，或者做出精致怀表而避免损坏\n\n时停者，做好你的准备，用你掌握时间的奥秘，守护好那些人",
+
 
 
 
@@ -152,10 +159,10 @@
       "guidebook.role.description.noellesroles:jester": "狂信者来自一个遥远的王国，尽心尽力服侍了国王一辈子，他将表演此生最后一个载入史册的戏法。\n\n当狂信者被平民的左轮击中时，他将进入狂暴模式，碾碎所有挡路的乘客，所经之处一片狼藉。\n\n幸运的是，狂信者无法自行进入狂暴模式，所以在考虑要枪杀哪位乘客时，要三思而后行。",
   "guidebook.role.noellesroles:executioner": "仇杀客",
       "guidebook.role.title.noellesroles:executioner": "终极刺客",
-      "guidebook.role.description.noellesroles:executioner": "仇杀客已经登上了%1$s，等待着目标的死亡。\n\n虽然他没有任何武器，但是可以购买不同的道具用来混淆视听，以此来陷害他人。\n\n当目标乘客被杀手之外的人杀害后，仇杀客将会变身成为新的杀手。\n\n有趣的是，他原本没有杀手们的透视本能，在目标被杀手之外的人杀害之前，他并不知道谁是杀手。",
+      "guidebook.role.description.noellesroles:executioner": "仇杀客已经来到于此，等待着目标的死亡。\n\n虽然他没有任何武器，但是可以购买不同的道具用来混淆视听，以此来陷害他人。\n\n当目标乘客被杀手之外的人杀害后，仇杀客将会变身成为新的杀手。\n\n有趣的是，他原本没有杀手们的透视本能，在目标被杀手之外的人杀害之前，他并不知道谁是杀手。",
   "guidebook.role.noellesroles:morphling": "变形怪",
       "guidebook.role.title.noellesroles:morphling": "危险的怪物",
-      "guidebook.role.description.noellesroles:morphling": "这种远古的怪物掌握了伪装的能力，它们可以伪装成%1$s上任何乘客。\n\n即使伪装成的乘客死亡，伪装也不会解除，直到时间结束才显露出原本的丑陋模样。\n\n变形怪通常喜欢针对沉默寡言的乘客，因为它们还没法模仿声音。\n\n它最喜欢的搭档是造尸怪，因为它们可以对好人上演一场完美的欺诈。",
+      "guidebook.role.description.noellesroles:morphling": "这种远古的怪物掌握了伪装的能力，它们可以伪装成任何乘客。\n\n即使伪装成的乘客死亡，伪装也不会解除，直到时间结束才显露出原本的丑陋模样。\n\n变形怪通常喜欢针对沉默寡言的乘客，因为它们还没法模仿声音。\n\n它最喜欢的搭档是造尸怪，因为它们可以对好人上演一场完美的欺诈。",
   "guidebook.role.noellesroles:phantom": "幻灵",
       "guidebook.role.title.noellesroles:phantom": "无踪无影",
       "guidebook.role.description.noellesroles:phantom": "幻灵拥有隐身的能力，每 90 秒可使用一次能力。\n\n虽然它们的躯体会被隐藏，但是手持的所有物品都会照旧显现。\n\n幻灵们通常喜欢躲在房间角落，在隐身时悄悄的击杀来往的落单乘客。",
