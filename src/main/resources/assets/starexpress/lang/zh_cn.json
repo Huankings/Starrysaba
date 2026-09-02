@@ -40,7 +40,7 @@
   "guidebook.role.description.noellesroles:muzzler": "静语者是一个全副武装的杀手，不过这次他们带着的是胶带。我不是在开玩笑。\n\n花费 75 金币，静语者可以购买胶带，并用它封住一名玩家的嘴。\n\n如果被封住嘴的玩家在 %9$s 秒后仍停留在外，他们将会因空气不足而窒息死亡。\n\n可以通过点击 %10$s 次来移除被封住嘴玩家身上的胶带，但每次操作都会降低被封住嘴玩家的san值——如果因此san值被降至 0，他们会因痛苦而亡。\n\n同时，静语者在疯魔模式下，不会有疯魔音乐和球棒击打的声音。毕竟，在沉默中完成猎杀才是最出其不意的。",
 
   "guidebook.role.noellesroles:corpsemaker": "造尸怪",
-  "guidebook.role.title.noellesroles:corpsemaker": "伪造尸体的怪物",
+  "guidebook.role.title.noellesroles:corpsemaker": "造尸愚人",
   "guidebook.role.description.noellesroles:corpsemaker": "伪造尸体一直是它的拿手好戏，通过精妙的包装，采取对方的DNA，生成别无二致的尸体混淆视听。\n\n它最喜欢的搭档有两个，一个是变形怪，它们可以一起给好人上演一场完美的欺诈；一个是死灵法师，因为死灵法师可以通过伪造尸体的DNA把活人也复活杀手从而成为自己的一员。",
   "guidebook.role.noellesroles:angel": "天使",
   "guidebook.role.title.noellesroles:angel": "心灵守护者",
@@ -89,7 +89,7 @@
   "guidebook.role.description.noellesroles:prophet": "先知是一位古老的预言家，掌握着伟大的感知能力。他能发动一次“感知揭秘”，揭露一个人的身份，同时，那个人将会被先知庇护，不再会被巫毒魔法伤害\n\n水晶球是先知的精准标记，对准玩家使用可以准确的再下一次感知揭秘身份的时候，将精准的通告所有人所标记的玩家的身份。\n\n对于先知来说，身份是可以被告知的，无论是谁，包括自己。因此，让大家直面自己身份，才能让问题迎刃而解",
   "guidebook.role.noellesroles:cook": "厨师",
   "guidebook.role.title.noellesroles:cook": "颠勺大师",
-  "guidebook.role.description.noellesroles:cook": "作为厨师而受到大家欢迎，毕竟谁不想在旅途中吃上一口热乎的呢？\n\n平底锅不仅能用来烹饪，危急时刻还能当做武器击晕敌人。甚至，它能够用来挡子弹！\n\n每当有人食用食物时，厨师能够短暂地看到他们的位置，毕竟没人能逃过厨师的注视。\n\n记住，厨师只是个普通人，别盲目拿着平底锅去追杀手...",
+  "guidebook.role.description.noellesroles:cook": "作为厨师而受到大家欢迎，毕竟谁不想在旅途中吃上一口热乎的呢？\n\n平底锅不仅能用来烹饪，危急时刻还能当做武器击晕敌人。甚至，它能够用来挡子弹！\n\n每当有人食用食物时，厨师能够短暂地看到他们的位置。同时，厨师可以将食物喂给他们，只要帮助他们完成任务，厨师就可以获得不菲的金币奖励\n\n厨师还可以购买飞锅，飞锅可远程投掷，被命中的人会造成和平底锅一样的眩晕\n\n同时，厨师可以购买专门的疯魔模式获得无限制飞锅投掷来保护大家\n\n将食物和保护带给好人的厨师，注定会成为杀手优先清除的目标...",
   "guidebook.role.noellesroles:physician": "医师",
   "guidebook.role.title.noellesroles:physician": "白衣天使",
   "guidebook.role.description.noellesroles:physician": "值得信赖的人，发誓要救死扶伤！\n\n医师天生具备敏锐的嗅觉，能够看到被下毒或陷入幻觉的人，并且拥有更长的冲刺时间，这足以在危急时刻赶到患者身边。当然，分析出尸体的死因也是医师必备的一项技能。\n\n初始携带一个医疗箱，可以使用医疗箱为一名玩家解除异常状态，这一行为也将获得对应的报酬。\n\n在商店中可以购买药丸，服用后可使自己额外承受一次可被护盾抵挡的攻击。",
@@ -156,6 +156,15 @@
   "guidebook.role.noellesroles:jason": "杰森",
   "guidebook.role.title.noellesroles:jason": "杀戮机器",
   "guidebook.role.description.noellesroles:jason": "无情的杀戮机器，只想着最高效率的杀人方式\n\n商店购买投掷武器，被砸中的玩家会在第一次第二次陷入倒地濒死状态，可被其他玩家靠近蹲下救治起来，若濒死时间内没有救治或者再次受到伤害则会让该濒死玩家真正死亡。而第三次被击倒则直接死亡。杰森每击倒一个人额外获得金币，被击倒玩家死亡后也收割杀人奖赏\n\n商店可购置投掷油桶，投出后可用一次性打火机点燃，烧死范围内的玩家\n\n杰森的疯魔模式将会持有一把无消耗的飞镐无差别攻击\n\n同时，杰森可以使用技能进入“无恶不在”状态（和疯魔冲突），场上会起迷雾，进入后杰森和存活玩家双方无法看到对方，也无法听到语音和打字，武器也无法造成伤害，但是杰森可以观察到禁止不动或者跑步走路的玩家粒子效果，只有蹲着走才不会被察觉\n\n结束无恶不在状态后半径4格范围内的玩家会被惊吓，并且短时间掉san加剧\n\n所以，当感受到那股气息的到来后，请先自保吧",
+  "guidebook.role.noellesroles:lich": "巫妖",
+  "guidebook.role.title.noellesroles:lich": "魔力驾驭",
+  "guidebook.role.description.noellesroles:lich": "巫妖拥有强大的巫术能力，并用这些能力来杀死那些人\n\n巫妖可以使用法杖发射骷髅，骷髅命中玩家则会造成伤害\n\n同时，巫妖可以购买魔法屏障，释放后魔法屏障对其他敌对阵营造成物品和技能强制冷却\n\n此外，巫妖可以使用技能锁住或者修复附近的门，从而拖垮好人的节奏\n\n作为巫妖，她的愿景就是除掉反对自己的阵营，带领杀手一起走向胜利",
+  "guidebook.role.noellesroles:vecna": "维克那",
+  "guidebook.role.title.noellesroles:vecna": "颠倒世界",
+  "guidebook.role.description.noellesroles:vecna": "维克那拥有强大的超能力，可以颠倒常识的存在\n\n技能键可以给予颠倒标记，被颠倒标记的玩家效果期间伤害杀手或者杀手中立则会反噬自己，而好人伤害好人则不会惩罚，并且这些都会给维克那金币奖励。同时，维克那杀死颠倒标记的人不会消耗匕首冷却\n\n维克那还可以开启颠倒疯魔，颠倒疯魔期间，其他存活玩家的鼠标操作，前后左右，跳跃蹲下都会被颠倒，想必这会带来很大的麻烦\n\n因此，记住这个逆转颠倒的存在，并及时清理它避免祸害",
+  "guidebook.role.noellesroles:shadow_jester": "影子小丑",
+  "guidebook.role.title.noellesroles:shadow_jester": "命运玩弄",
+  "guidebook.role.description.noellesroles:shadow_jester": "影子小丑成对的来到了这里。他们为了各自的念想而实施计划\n\n他们需要在开局后完成指定的任务数来获得一把匕首，匕首只能杀死另一半。当另一半死亡，自己则变成狂信者辅佐杀手。但他们也可以缔结誓言，被命运维系\n\n在缔结誓言后，同意人获得左轮手枪，申请人获得开锁器，并都解锁本能透视\n\n缔结誓言开始后，他们需要杀死所有人来获得单独的胜利，在杀手阵营或者好人阵营的一方死完后，进入谢幕时刻\n\n谢幕时刻，双方获得左轮，开锁器和撬棍，同时左轮手枪冷却降低，他们将一同与其他玩家战斗，直到获得游戏的胜利\n\n所以，究竟是辅佐杀手的意愿更加诱人，还是一同摘取胜利的果实更有成就感？",
 
 
 
@@ -167,7 +176,7 @@
       "guidebook.role.description.noellesroles:executioner": "仇杀客已经来到于此，等待着目标的死亡。\n\n虽然他没有任何武器，但是可以购买不同的道具用来混淆视听，以此来陷害他人。\n\n当目标乘客被杀手之外的人杀害后，仇杀客将会变身成为新的杀手。\n\n有趣的是，他原本没有杀手们的透视本能，在目标被杀手之外的人杀害之前，他并不知道谁是杀手。",
   "guidebook.role.noellesroles:morphling": "变形怪",
       "guidebook.role.title.noellesroles:morphling": "危险的怪物",
-      "guidebook.role.description.noellesroles:morphling": "这种远古的怪物掌握了伪装的能力，它们可以伪装成任何乘客。\n\n即使伪装成的乘客死亡，伪装也不会解除，直到时间结束才显露出原本的丑陋模样。\n\n变形怪通常喜欢针对沉默寡言的乘客，因为它们还没法模仿声音。\n\n它最喜欢的搭档是造尸怪，因为它们可以对好人上演一场完美的欺诈。",
+      "guidebook.role.description.noellesroles:morphling": "这种远古的怪物掌握了伪装的能力，它们可以伪装成任何乘客。\n\n即使伪装成的乘客死亡，伪装也不会解除，直到时间结束才显露出原本的丑陋模样。\n\n变形怪通常喜欢针对沉默寡言的乘客，因为它们还没法模仿声音。\n\n变形怪同时拥有变形试剂和变形能力的加成，只要变形杀人或者被变形试剂变形的人杀人或被杀，都会获得价格不菲的金币。\n\n被变形的玩家被枪将不会触发小脑，这通常会让好人以为自己找到凶手\n\n它最喜欢的搭档是造尸怪，因为它们可以对好人上演一场完美的欺诈。",
   "guidebook.role.noellesroles:phantom": "幻灵",
       "guidebook.role.title.noellesroles:phantom": "无踪无影",
       "guidebook.role.description.noellesroles:phantom": "幻灵拥有隐身的能力，每 90 秒可使用一次能力。\n\n虽然它们的躯体会被隐藏，但是手持的所有物品都会照旧显现。\n\n幻灵们通常喜欢躲在房间角落，在隐身时悄悄的击杀来往的落单乘客。",
