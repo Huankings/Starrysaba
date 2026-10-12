@@ -165,6 +165,22 @@
   "guidebook.role.noellesroles:shadow_jester": "影子小丑",
   "guidebook.role.title.noellesroles:shadow_jester": "命运玩弄",
   "guidebook.role.description.noellesroles:shadow_jester": "影子小丑成对的来到了这里。他们为了各自的念想而实施计划\n\n他们需要在开局后完成指定的任务数来获得一把匕首，匕首只能杀死另一半。当另一半死亡，自己则变成狂信者辅佐杀手。但他们也可以缔结誓言，被命运维系\n\n在缔结誓言后，同意人获得左轮手枪，申请人获得开锁器，并都解锁本能透视\n\n缔结誓言开始后，他们需要杀死所有人来获得单独的胜利，在杀手阵营或者好人阵营的一方死完后，进入谢幕时刻\n\n谢幕时刻，双方获得左轮，开锁器和撬棍，同时左轮手枪冷却降低，他们将一同与其他玩家战斗，直到获得游戏的胜利\n\n所以，究竟是辅佐杀手的意愿更加诱人，还是一同摘取胜利的果实更有成就感？",
+  "guidebook.role.noellesroles:commoner": "平民",
+  "guidebook.role.title.noellesroles:commoner": "配角",
+  "guidebook.role.description.noellesroles:commoner": "被卷入魔女岛谋杀案中的无辜者，只是意外坐上了这趟魔女岛，手无寸铁，只为了存活下去而努力。",
+  "guidebook.role.noellesroles:outlaw": "亡命徒",
+  "guidebook.role.title.noellesroles:outlaw": "死亡倒计时",
+  "guidebook.role.description.noellesroles:outlaw": "死亡的丧钟已经敲响，带上你唯一的装备。与这个世界对抗到底，直到杀光所有人，最终获得游戏的胜利",
+  "guidebook.role.noellesroles:myers": "迈尔斯",
+  "guidebook.role.title.noellesroles:myers": "窥视与杀戮",
+  "guidebook.role.description.noellesroles:myers": "一颗蕴含着纯粹邪恶的种子，在岁月中逐渐展露他的恐怖\n\n迈尔斯商店无法购买绝大多数东西，只有基本的匕首和左轮\n\n迈尔斯拥有窥视他人的能力，当使用能力键窥视他人的时候，迈尔斯将慢慢获得恶意值(迈尔斯蹲下时候吸取的恶意值会更高)，当积攒到一定程度后，便可“恶灵附身”，同时迈尔斯也可以通过做任务或者杀人获得少量恶意值\n\n恶灵附身需要消耗恶意值，一般为开局人数*30，恶灵附身后，迈尔斯获得一把屠刀，蓄力后即可快速冲刺，且撞到玩家后造成一击毙命的伤害(伤害会有两次)，碰到门则会撞开门。\n\n恶灵附身下的迈尔斯是基本免疫所有伤害，因此，当恶灵附身后，最好不要和迈尔斯碰面，否则会死的非常惨烈\n\n当代表纯粹邪恶的种子降临，那么又会带来什么风波？",
+  "guidebook.role.noellesroles:perceiver": "感知者",
+  "guidebook.role.title.noellesroles:perceiver": "深渊凝视",
+  "guidebook.role.description.noellesroles:perceiver": "感知者拥有者天赋异禀的感知能力，他能察觉到透视而来的人并透视到他们(需要一定的时间凝视)\n\n同时背包技能可以让其他玩家获得透视感知者的能力，而冷却默认90s，失败60s，可以通过做任务减少\n\n但是感知者无法区分看向他眼睛的善恶，因此，感知者需要务必注意好自己的存活...",
+
+
+
+
 
 
 
