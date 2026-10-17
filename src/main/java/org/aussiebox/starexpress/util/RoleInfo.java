@@ -38,7 +38,15 @@ public final class RoleInfo {
     }
 
     public enum GuidebookEntry {
+        /**
+         * 指南书左侧的职业阵营分类。
+         *
+         * <p>这里单独保留 VIGILANTE，而不是继续把义警并入 GOOD，
+         * 这样 GuidebookScreen 可以直接映射 Wathe 的正式 Faction，
+         * 原版义警和扩展显式注册的义警职业也就会进入同一个独立列表。</p>
+         */
         GOOD,
+        VIGILANTE,
         NEUTRAL,
         EVIL,
         NONE;

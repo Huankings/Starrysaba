@@ -1,5 +1,6 @@
 package org.aussiebox.starexpress.client.gui.screen;
 
+import dev.doctor4t.wathe.api.Faction;
 import dev.doctor4t.wathe.api.Role;
 import dev.doctor4t.wathe.api.WatheRoles;
 import dev.doctor4t.wathe.cca.GameWorldComponent;
@@ -50,10 +51,7 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
 
         for (Role role : WatheRoles.ROLES) {
             if (!Language.getInstance().has("guidebook.role." + role.identifier())) continue;
-            GuidebookEntry entry = GuidebookEntry.NONE;
-            if (role.isInnocent() && !role.canUseKiller()) entry = GuidebookEntry.GOOD;
-            if (!role.isInnocent() && !role.canUseKiller()) entry = GuidebookEntry.NEUTRAL;
-            if (!role.isInnocent() && role.canUseKiller()) entry = GuidebookEntry.EVIL;
+            GuidebookEntry entry = getGuidebookEntry(role);
             roleInfo.putIfAbsent(String.valueOf(role.identifier()), new RoleInfo(role.identifier().getNamespace(), RoleType.ROLE, role.color(), entry));
         }
 
@@ -63,6 +61,24 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
         }
 
         return roleInfo;
+    }
+
+    /**
+     * 将 Wathe 公开的正式阵营转换成指南书左侧的展示分类。
+     *
+     * <p>旧版指南书通过 isInnocent/canUseKiller 两个历史布尔值推断阵营，
+     * 但原版义警和扩展义警都与普通平民共享同一组旧布尔值，因此必然会被误放进平民列表。
+     * 这里改为读取 Role#getFaction()：扩展只要通过 registerVigilanteRole(...) 或其它正式接口
+     * 显式注册为 VIGILANTE，就会自动进入义警分类，不需要在 StarryExpress 内逐个硬编码职业 ID。</p>
+     */
+    private static GuidebookEntry getGuidebookEntry(Role role) {
+        Faction faction = role.getFaction();
+        return switch (faction) {
+            case CIVILIAN -> GuidebookEntry.GOOD;
+            case VIGILANTE -> GuidebookEntry.VIGILANTE;
+            case NEUTRAL -> GuidebookEntry.NEUTRAL;
+            case KILLER -> GuidebookEntry.EVIL;
+        };
     }
 
     public Map<String, String> roleCreators = new HashMap<>();
@@ -155,6 +171,7 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
 
         CollapsibleContainer rolesContainer = Containers.collapsible(Sizing.fill(), Sizing.content(), Component.translatable("guidebook.category.roles"), true);
             CollapsibleContainer goodRolesContainer = Containers.collapsible(Sizing.fill(), Sizing.content(), Component.translatable("guidebook.category.roles.good"), false);
+            CollapsibleContainer vigilanteRolesContainer = Containers.collapsible(Sizing.fill(), Sizing.content(), Component.translatable("guidebook.category.roles.vigilante"), false);
             CollapsibleContainer neutralRolesContainer = Containers.collapsible(Sizing.fill(), Sizing.content(), Component.translatable("guidebook.category.roles.neutral"), false);
             CollapsibleContainer evilRolesContainer = Containers.collapsible(Sizing.fill(), Sizing.content(), Component.translatable("guidebook.category.roles.evil"), false);
         CollapsibleContainer modifiersContainer = Containers.collapsible(Sizing.fill(), Sizing.content(), Component.translatable("guidebook.category.modifiers"), false);
@@ -171,6 +188,10 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
                 if (roleData.guidebookEntry() == GuidebookEntry.GOOD) {
                     goodRolesContainer.child(button.sizing(Sizing.content(), Sizing.content()).id(roleID));
                 }
+                if (roleData.guidebookEntry() == GuidebookEntry.VIGILANTE) {
+                    // 所有显式注册到 Wathe 义警阵营的职业统一进入该列表，避免针对扩展职业写死 ID。
+                    vigilanteRolesContainer.child(button.sizing(Sizing.content(), Sizing.content()).id(roleID));
+                }
                 if (roleData.guidebookEntry() == GuidebookEntry.NEUTRAL) {
                     neutralRolesContainer.child(button.sizing(Sizing.content(), Sizing.content()).id(roleID));
                 }
@@ -186,6 +207,8 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
 
         FlowLayout rolesLayout = Containers.verticalFlow(Sizing.content(), Sizing.content());
         rolesLayout.child(goodRolesContainer.id("category.roles.good"));
+        // 阵营顺序固定为平民、义警、中立、杀手，使好人侧相邻，同时让义警不再混入平民列表。
+        rolesLayout.child(vigilanteRolesContainer.id("category.roles.vigilante"));
         rolesLayout.child(neutralRolesContainer.id("category.roles.neutral"));
         rolesLayout.child(evilRolesContainer.id("category.roles.evil"));
 
@@ -299,6 +322,7 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
 
         CollapsibleContainer roleContainer = this.currentRoleButtonList.childById(CollapsibleContainer.class, "category.roles");
         CollapsibleContainer goodRoleContainer = this.currentRoleButtonList.childById(CollapsibleContainer.class, "category.roles.good");
+        CollapsibleContainer vigilanteRoleContainer = this.currentRoleButtonList.childById(CollapsibleContainer.class, "category.roles.vigilante");
         CollapsibleContainer neutralRoleContainer = this.currentRoleButtonList.childById(CollapsibleContainer.class, "category.roles.neutral");
         CollapsibleContainer evilRoleContainer = this.currentRoleButtonList.childById(CollapsibleContainer.class, "category.roles.evil");
         CollapsibleContainer modifierContainer = this.currentRoleButtonList.childById(CollapsibleContainer.class, "category.modifiers");
@@ -306,6 +330,11 @@ public class GuidebookScreen extends BaseOwoScreen<FlowLayout> {
         if (roleInfo.get(roleID).guidebookEntry() == GuidebookEntry.GOOD) {
             if (!roleContainer.expanded()) roleContainer.toggleExpansion();
             if (!goodRoleContainer.expanded()) goodRoleContainer.toggleExpansion();
+        }
+        if (roleInfo.get(roleID).guidebookEntry() == GuidebookEntry.VIGILANTE) {
+            // 快速跳转到原版或扩展义警时，同时展开职业总分类和义警子分类，确保目标按钮可见。
+            if (!roleContainer.expanded()) roleContainer.toggleExpansion();
+            if (!vigilanteRoleContainer.expanded()) vigilanteRoleContainer.toggleExpansion();
         }
         if (roleInfo.get(roleID).guidebookEntry() == GuidebookEntry.NEUTRAL) {
             if (!roleContainer.expanded()) roleContainer.toggleExpansion();

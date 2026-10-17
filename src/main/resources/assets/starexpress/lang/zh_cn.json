@@ -5,6 +5,7 @@
   "guidebook.tooltip.open": "打开指南书",
   "guidebook.category.roles": "角色身份",
       "guidebook.category.roles.good": "平民阵营",
+      "guidebook.category.roles.vigilante": "义警阵营",
       "guidebook.category.roles.neutral": "中立阵营",
       "guidebook.category.roles.evil": "杀手阵营",
   "guidebook.category.modifiers": "附加词条",
@@ -177,6 +178,9 @@
   "guidebook.role.noellesroles:perceiver": "感知者",
   "guidebook.role.title.noellesroles:perceiver": "深渊凝视",
   "guidebook.role.description.noellesroles:perceiver": "感知者拥有者天赋异禀的感知能力，他能察觉到透视而来的人并透视到他们(需要一定的时间凝视)\n\n同时背包技能可以让其他玩家获得透视感知者的能力，而冷却默认90s，失败60s，可以通过做任务减少\n\n但是感知者无法区分看向他眼睛的善恶，因此，感知者需要务必注意好自己的存活...",
+  "guidebook.role.noellesroles:killer_queen": "杀手皇后",
+  "guidebook.role.title.noellesroles:killer_queen": "好戏开幕",
+  "guidebook.role.description.noellesroles:killer_queen": "阵营：杀手中立\n\n吼吼，好戏上演咯！\n杀手皇后比起屠杀，更喜欢和平的赢下比赛\n\n可透视杀手，非独立中立的中立阵营和模仿者\n\n商店可购买酸液放置托盘，拿取的好人和独立中立(简称有效目标)会被带上标记。饮用的玩家基本都会被晕眩并给有效目标和自己金币\n\n购买杀手皇后疯魔可敲击玩家，杀手和杀手中立无法开启疯魔与杀人，敲到的玩家会被定身并且给未标记有效目标上标记(达到次数可获得一层护盾)，疯魔结束后这些疯魔标记会消失\n\n当所有有效目标都上标记的时候，杀手皇后可带领杀手和杀手中立以及被招募的玩家一起胜利。\n\n能力键对准范围玩家释放，对准杀手释放则洗牌其杀手职业，对准被招募玩家或者模仿者释放则可以招募他杀掉目标变成杀手(招募机会需要杀手死亡或者招募玩家死亡获得)\n\n所以还等什么？带领着你的杀手们一起和平的赢下比赛吧！",
 
 
 
